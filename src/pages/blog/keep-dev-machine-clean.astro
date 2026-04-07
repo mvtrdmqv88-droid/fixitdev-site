@@ -66,7 +66,7 @@ import Base from "../../layouts/Base.astro";
           When you <code>Ctrl+C</code>, it's gone. Your machine has no idea PostgreSQL was ever there.
         </p>
         <p>
-          For a more general-purpose approach, tools like <a href="/tools/sandbox-cli">Sandbox CLI</a> let you spin up a full throwaway Linux environment via SSH:
+          For a more general-purpose approach, tools like <a href="/fixitdev-site/tools/sandbox-cli">Sandbox CLI</a> let you spin up a full throwaway Linux environment via SSH:
         </p>
         <pre class="code-block"><span class="code-prompt">$</span> sandbox ssh
 <span class="code-output">root@sandbox-7f3a:~#</span> apt-get install postgresql-16
@@ -109,7 +109,7 @@ import Base from "../../layouts/Base.astro";
           The nuclear option -- and honestly my favorite approach. Instead of trying to keep your machine clean retroactively, just stop installing things on it in the first place.
         </p>
         <p>
-          My current setup: my host machine has Docker, my editor, a terminal, and <a href="/tools/sandbox-cli">Sandbox CLI</a>. That's it. When I need to test something, I run <code>sandbox ssh</code> and do it in a disposable container. The free tier gives you 3 containers per day, which covers most quick experiments. The Pro plan ($4.99/month) is unlimited if you want to go all-in on this approach.
+          My current setup: my host machine has Docker, my editor, a terminal, and <a href="/fixitdev-site/tools/sandbox-cli">Sandbox CLI</a>. That's it. When I need to test something, I run <code>sandbox ssh</code> and do it in a disposable container. The free tier gives you 3 containers per day, which covers most quick experiments. The Pro plan ($4.99/month) is unlimited if you want to go all-in on this approach.
         </p>
         <p>
           Is it a bit extreme? Maybe. But my laptop hasn't slowed down in a year, and <code>which python</code> only returns one result.
@@ -120,14 +120,14 @@ import Base from "../../layouts/Base.astro";
           A clean dev machine isn't about being obsessive -- it's about reducing the surface area for weird bugs, conflicts, and "why is this broken" debugging sessions. The less stuff on your host machine, the fewer things can go wrong.
         </p>
         <p>
-          Start with version managers and local dependencies. Add containers for experimentation. If you want the simplest possible approach, check out <a href="/tools/sandbox-cli">Sandbox CLI</a> for instant throwaway environments.
+          Start with version managers and local dependencies. Add containers for experimentation. If you want the simplest possible approach, check out <a href="/fixitdev-site/tools/sandbox-cli">Sandbox CLI</a> for instant throwaway environments.
         </p>
         <p>
           Your future self (and your laptop's SSD) will thank you.
         </p>
 
         <div class="post-cta">
-          <a href="/tools/sandbox-cli" class="cta-link">Try Sandbox CLI -- keep your machine clean, effortlessly</a>
+          <a href="/fixitdev-site/tools/sandbox-cli" class="cta-link">Try Sandbox CLI -- keep your machine clean, effortlessly</a>
         </div>
       </div>
     </div>
