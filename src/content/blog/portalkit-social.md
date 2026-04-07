@@ -5,10 +5,10 @@
 ## Twitter/X
 
 ### Post 1 - Launch announcement
-I got tired of sending 5+ "hey, can you send me that file?" emails per project. So I built PortalKit -- a client onboarding portal for freelancers. Build a form, share a link, get everything in one place. Free to try. https://fixitdev.com/tools/portalkit #freelance #indiedev #buildinpublic
+Tired of "hey, can you send me that file?" emails? I built PortalKit -- a client onboarding portal for freelancers. Build a form, share a link, get everything in one place. Free. https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/portalkit/ #freelance #buildinpublic
 
 ### Post 2 - Feature highlight
-The client onboarding workflow most freelancers use: send email, wait, follow up, wait, get half the files, follow up again, finally start project 2 weeks late. PortalKit: send one link, get everything at once. Drag & drop builder, no client sign-up needed. https://fixitdev.com/tools/portalkit
+Most freelancers: send email, wait, follow up, get half the files, follow up again, start project 2 weeks late. PortalKit: send one link, get everything at once. No client sign-up needed. https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/portalkit/
 
 ### Post 3 - Engagement question
 Freelancers: how do you collect client info and assets at the start of a project? Email chains? Google Forms? Notion? I kept running into the same problem so I built a simple portal tool. Curious what everyone else does. #freelance
@@ -31,7 +31,7 @@ It's free for one portal, which honestly might be enough for most people. If you
 
 I've been using it for about 3 months and my average "time to get all client info" went from 11 days to 2 days. The biggest win is honestly just not feeling like a nag.
 
-Would love feedback if anyone tries it: https://fixitdev.com/tools/portalkit
+Would love feedback if anyone tries it: https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/portalkit/
 
 Not trying to spam -- genuinely built this because I needed it and figured others might too.
 
@@ -84,4 +84,4 @@ Tech stack: React 18 + Vite, @dnd-kit for drag and drop.
 
 Free for 1 portal, $19/mo or $49 one-time for unlimited.
 
-https://fixitdev.com/tools/portalkit
+https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/portalkit/

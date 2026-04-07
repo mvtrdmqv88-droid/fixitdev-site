@@ -6,13 +6,7 @@
 
 ### Tweet 1 - Launch announcement
 
-I got tired of guessing my MRR, so I built a dashboard that connects to Stripe and calculates it automatically.
-
-MRRScope shows you MRR, ARR, Churn, LTV, ARPU, and revenue breakdowns. $29 one-time or try the demo free.
-
-https://fixitdev.com/tools/mrrscope
-
-#indiehackers #saas #buildinpublic
+Tired of guessing your MRR? I built MRRScope -- connects to Stripe, shows MRR, ARR, Churn, LTV, ARPU instantly. $29 one-time or try the demo free. https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/mrrscope/ #indiehackers #saas #buildinpublic
 
 ### Tweet 2 - Feature highlight
 
@@ -24,7 +18,7 @@ Your Stripe dashboard doesn't tell you:
 
 MRRScope does. One Stripe connect, all the numbers.
 
-https://fixitdev.com/tools/mrrscope
+https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/mrrscope/
 
 #saas #stripe #indiehackers
 
@@ -64,7 +58,7 @@ I'm not trying to compete with Baremetrics or ChartMogul — those are great for
 
 Would love feedback. What metrics do you track that I'm missing?
 
-Link: https://fixitdev.com/tools/mrrscope
+Link: https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/mrrscope/
 
 ---
 
@@ -94,7 +88,7 @@ Sharing something I just shipped: MRRScope — a SaaS metrics dashboard that con
 
 Happy to answer questions about the build or the product. Feedback welcome!
 
-https://fixitdev.com/tools/mrrscope
+https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/mrrscope/
 
 ---
 
@@ -120,7 +114,7 @@ MRRScope is a dashboard that connects to Stripe and calculates SaaS metrics (MRR
 
 If anyone's curious about the Stripe subscription aggregation approach, happy to go deeper on that.
 
-https://fixitdev.com/tools/mrrscope
+https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/mrrscope/
 
 ---
 
@@ -164,4 +158,4 @@ Built with Next.js 14 and Recharts. There's a demo mode with sample data you can
 
 Pricing: free demo, $29 one-time or $9.99/mo for real Stripe data.
 
-https://fixitdev.com/tools/mrrscope
+https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/mrrscope/

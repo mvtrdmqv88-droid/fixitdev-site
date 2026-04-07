@@ -125,7 +125,7 @@ import Base from "../../layouts/Base.astro";
             <li>Interactive charts</li>
             <li>No sign-up required</li>
           </ul>
-          <a href="#" class="btn-secondary btn-block">Try Demo</a>
+          <a href="https://github.com/mvtrdmqv88-droid/mrrscope" class="btn-secondary btn-block">Try Demo</a>
         </div>
         <div class="price-card featured">
           <span class="price-badge">Most Popular</span>
@@ -139,7 +139,7 @@ import Base from "../../layouts/Base.astro";
             <li>Historical trend tracking</li>
             <li>Export to CSV</li>
           </ul>
-          <a href="#" class="btn-primary btn-block">Get Pro</a>
+          <a href="https://github.com/mvtrdmqv88-droid/mrrscope" class="btn-primary btn-block">Get Pro</a>
           <p class="price-alt">or $9.99/mo if you prefer</p>
         </div>
       </div>
@@ -151,26 +151,26 @@ import Base from "../../layouts/Base.astro";
     <div class="container">
       <h2 class="section-title">FAQ</h2>
       <div class="faq-list">
-        <div class="faq-item">
-          <h3>Is my Stripe data safe?</h3>
+        <details class="faq-item">
+          <summary>Is my Stripe data safe?</summary>
           <p>Yes. MRRScope uses Stripe's official OAuth and only requests read-only access to subscription data. We never see your customers' payment details and we don't store raw Stripe data on our servers.</p>
-        </div>
-        <div class="faq-item">
-          <h3>What's the difference between the demo and real data?</h3>
+        </details>
+        <details class="faq-item">
+          <summary>What's the difference between the demo and real data?</summary>
           <p>The demo uses realistic sample data so you can explore the full dashboard. Pro mode connects to your actual Stripe account and calculates metrics from your real subscriptions.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Why should I pick MRRScope over Baremetrics or ProfitWell?</h3>
+        </details>
+        <details class="faq-item">
+          <summary>Why should I pick MRRScope over Baremetrics or ProfitWell?</summary>
           <p>Those are great tools if you're a funded startup. But if you're an indie founder doing $500-5,000 MRR, spending $100+/month on analytics doesn't make sense. MRRScope gives you the metrics you need at a price that works for early-stage SaaS.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Can I get a refund?</h3>
+        </details>
+        <details class="faq-item">
+          <summary>Can I get a refund?</summary>
           <p>Yes. If MRRScope doesn't work for you within 14 days of purchase, email me and I'll refund you. No questions asked.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Do you support Paddle, Lemon Squeezy, or other payment processors?</h3>
+        </details>
+        <details class="faq-item">
+          <summary>Do you support Paddle, Lemon Squeezy, or other payment processors?</summary>
           <p>Not yet — Stripe only for now. Paddle support is on the roadmap. If you want to bump the priority, open an issue on GitHub.</p>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -180,7 +180,7 @@ import Base from "../../layouts/Base.astro";
     <div class="container">
       <h2>Stop guessing. Start knowing.</h2>
       <p>Try the demo for free. Connect Stripe when you're ready.</p>
-      <a href="#" class="btn-primary">Try MRRScope Free</a>
+      <a href="https://github.com/mvtrdmqv88-droid/mrrscope" class="btn-primary">Try MRRScope Free</a>
     </div>
   </section>
 
@@ -416,13 +416,23 @@ import Base from "../../layouts/Base.astro";
     margin-top: 1.5rem;
   }
   .faq-item {
-    background: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
   }
-  .faq-item h3 { font-size: 1rem; margin-bottom: 0.5rem; }
-  .faq-item p { color: var(--color-text-muted); font-size: 0.9rem; }
+  .faq-item summary {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: var(--color-surface);
+  }
+  .faq-item summary:hover { color: var(--color-accent); }
+  .faq-item p {
+    padding: 0 1.25rem 1rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
 
   /* Bottom CTA */
   .bottom-cta {

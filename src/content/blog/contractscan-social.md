@@ -3,10 +3,10 @@
 ## Twitter/X
 
 ### Post 1 - Launch announcement
-I got tired of signing freelance contracts I didn't fully understand. So I built ContractScan -- upload a PDF, get instant AI analysis of every risky clause, with a risk score and suggested edits. Free to use, no sign-up. https://fixitdev.com/tools/contractscan #freelance #buildinpublic
+I got tired of signing contracts I didn't fully understand. So I built ContractScan -- upload a PDF, get AI risk analysis with a score and suggested edits. Free, no sign-up. https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/contractscan/ #freelance #buildinpublic
 
 ### Post 2 - Feature highlight
-Your freelance contract has a non-compete clause buried on page 7. A broad IP assignment on page 4. And a net-90 payment term hidden in the definitions. ContractScan catches all of it in 30 seconds. https://fixitdev.com/tools/contractscan
+Your freelance contract has a non-compete clause buried on page 7. A broad IP assignment on page 4. And a net-90 payment term hidden in the definitions. ContractScan catches all of it in 30 seconds. https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/contractscan/
 
 ### Post 3 - Engagement question
 Freelancers: what's the worst clause you've ever found in a contract AFTER signing it? I'll go first -- unlimited liability with no cap on a $2K project.
@@ -33,7 +33,7 @@ It's NOT a replacement for a lawyer on big deals. But for standard freelance agr
 
 Would love feedback from other freelancers who've dealt with bad contracts. What clauses do you always watch for?
 
-Link: https://fixitdev.com/tools/contractscan
+Link: https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/contractscan/
 
 ---
 
@@ -62,7 +62,7 @@ Free tier: 3 scans/day, no sign-up. Pro: $9.99/mo or $29 lifetime.
 
 Happy to answer questions about the tech or the product decisions.
 
-Link: https://fixitdev.com/tools/contractscan
+Link: https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/contractscan/
 
 ---
 
@@ -111,4 +111,4 @@ Tech: Next.js 14, Claude API for analysis, pdf-parse for PDF extraction. The int
 
 Free tier: 3 scans/day, no sign-up required. Pro: $9.99/mo or $29 one-time.
 
-https://fixitdev.com/tools/contractscan
+https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/contractscan/

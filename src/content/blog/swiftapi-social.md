@@ -5,10 +5,10 @@
 ## Twitter/X
 
 ### Tweet 1 — Introduction
-I got tired of Postman asking me to log in just to send a GET request. So I built SwiftAPI — a browser-based HTTP client with zero login, zero install, and zero cloud sync. Your data stays in your browser. Free to use. https://swiftapi.fixitdev.com #webdev #api #devtools
+I got tired of Postman asking me to log in just to send a GET request. So I built SwiftAPI — a browser-based HTTP client with zero login, zero install, and zero cloud sync. Your data stays in your browser. Free to use. https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/swiftapi/ #webdev #api #devtools
 
 ### Tweet 2 — Feature highlight
-SwiftAPI can import your Postman collections. Same requests, same headers — just without the mandatory account and cloud sync. All stored locally in your browser. https://swiftapi.fixitdev.com #webdev #api
+SwiftAPI can import your Postman collections. Same requests, same headers — just without the mandatory account and cloud sync. All stored locally in your browser. https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/swiftapi/ #webdev #api
 
 ### Tweet 3 — Engagement question
 Honest question for devs: do you actually use 10% of Postman's features, or are you also just sending GET requests and looking at JSON? Curious what everyone's API testing setup looks like in 2026. #webdev #devtools
@@ -38,7 +38,7 @@ Free version has all the core features. There's a Pro option ($29 one-time) if y
 
 Would love feedback from anyone who tries it. What's missing? What would make you actually switch?
 
-Link: https://swiftapi.fixitdev.com
+Link: https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/swiftapi/
 
 ---
 
@@ -60,7 +60,7 @@ Built this over the past few weeks after getting frustrated with the state of AP
 
 Still early — feedback very welcome. What would make this more useful for your workflow?
 
-https://swiftapi.fixitdev.com
+https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/swiftapi/
 
 ---
 
@@ -74,7 +74,7 @@ Genuine question. When did it become normal for a tool that sends HTTP requests 
 
 I get that team collaboration needs cloud features. But for individual developers doing everyday API testing during development, it feels like unnecessary overhead — and a privacy concern when you're working with auth tokens and internal endpoints.
 
-I ended up building my own browser-based alternative (SwiftAPI — https://swiftapi.fixitdev.com) that stores everything locally, but I'm curious: am I overthinking this? How do you all handle API testing in your day-to-day workflow?
+I ended up building my own browser-based alternative (SwiftAPI — https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/swiftapi/) that stores everything locally, but I'm curious: am I overthinking this? How do you all handle API testing in your day-to-day workflow?
 
 ---
 
@@ -122,6 +122,6 @@ Supports all HTTP methods, syntax-highlighted responses, collections, request hi
 
 Free core features. Pro ($29 one-time) adds env variables and collection export/import.
 
-https://swiftapi.fixitdev.com
+https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/swiftapi/
 
 Feedback welcome — especially on what's missing vs. your current setup.

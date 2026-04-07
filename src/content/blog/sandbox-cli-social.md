@@ -3,13 +3,7 @@
 ## Twitter/X
 
 ### Post 1: Introduction
-I kept polluting my laptop with tools I only needed once. So I built Sandbox CLI -- run `sandbox ssh`, get a fresh Ubuntu container via SSH, disconnect and it auto-destroys. Your machine stays clean.
-
-Free + Pro ($4.99/mo for unlimited).
-
-https://fixitdev.com/tools/sandbox-cli
-
-#devtools #docker #cli #opensource
+I kept polluting my laptop with tools I only needed once. So I built Sandbox CLI -- run `sandbox ssh`, get a fresh Ubuntu container, disconnect and it auto-destroys. Free + Pro ($4.99/mo). https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/sandbox-cli/ #devtools #docker #cli
 
 ### Post 2: Feature Demo
 `sandbox ssh` -- that's the whole workflow.
@@ -20,14 +14,14 @@ No Dockerfiles. No docker-compose. No cleanup.
 
 Built with Go + Docker SDK. Dashboard included.
 
-https://fixitdev.com/tools/sandbox-cli
+https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/sandbox-cli/
 
 ### Post 3: Engagement
 What's the weirdest thing you've found installed on your dev machine that you have zero memory of installing?
 
 I found three different Java JDKs and a MongoDB that had been running for 8 months.
 
-That's why I started using disposable containers for everything: https://fixitdev.com/tools/sandbox-cli
+That's why I started using disposable containers for everything: https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/sandbox-cli/
 
 ---
 
@@ -47,8 +41,8 @@ Free tier: 3 containers/day, 30-minute sessions. Pro: $4.99/month for unlimited 
 
 Would love feedback. What would make this more useful for your workflow?
 
-GitHub: https://github.com/fixitdev/sandbox-cli
-Site: https://fixitdev.com/tools/sandbox-cli
+GitHub: https://github.com/mvtrdmqv88-droid/sandbox-cli
+Site: https://mvtrdmqv88-droid.github.io/fixitdev-site/tools/sandbox-cli/
 
 ### r/devops (or r/programming)
 
@@ -75,7 +69,7 @@ Open source CLI tool (Go + Docker SDK) that manages throwaway dev containers.
 
 Free tier: 3 containers/day, 30-min limit. Pro ($4.99/mo): unlimited.
 
-https://github.com/fixitdev/sandbox-cli
+https://github.com/mvtrdmqv88-droid/sandbox-cli
 
 ### r/docker (niche)
 
@@ -89,7 +83,7 @@ Uses Docker SDK under the hood so it's native Docker, not some wrapper layer. Al
 
 Anyone else have this workflow? Curious what images/configs you'd want supported.
 
-https://github.com/fixitdev/sandbox-cli
+https://github.com/mvtrdmqv88-droid/sandbox-cli
 
 ---
 
@@ -131,4 +125,4 @@ Use case: testing tools without polluting your host machine, reproducing bugs in
 
 Free: 3 containers/day. Pro ($4.99/mo): unlimited.
 
-Code: https://github.com/fixitdev/sandbox-cli
+Code: https://github.com/mvtrdmqv88-droid/sandbox-cli
