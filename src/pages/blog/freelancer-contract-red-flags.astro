@@ -1,0 +1,133 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="7 Contract Red Flags Every Freelancer Should Watch For" description="Protect yourself from bad freelance contracts. Learn the 7 most dangerous clauses that can cost you money, freedom, and your IP.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time datetime="2026-04-07">April 7, 2026</time>
+        <h1>7 Contract Red Flags Every Freelancer Should Watch For</h1>
+        <p class="post-lead">Most freelancers sign contracts without fully reading them. Here are the clauses that can actually hurt you -- and what to do about them.</p>
+      </header>
+
+      <div class="post-body">
+        <p>
+          I've been freelancing for years. And I'll be honest: for the first two years, I barely read the contracts I signed. "It's just standard boilerplate," I told myself.
+        </p>
+        <p>
+          Then a client tried to claim ownership of a side project I built on my own time, citing a broad IP assignment clause I'd signed without thinking. That was my wake-up call.
+        </p>
+        <p>
+          Since then, I've reviewed hundreds of freelance contracts -- both my own and ones shared by other freelancers. These are the 7 red flags that come up over and over again.
+        </p>
+
+        <h2>1. Unlimited Liability</h2>
+        <p>
+          If a contract says you're liable for "any and all damages" without a cap, that's a problem. A simple web project shouldn't expose you to unlimited financial risk. Look for a liability cap -- ideally tied to the total contract value.
+        </p>
+        <p><strong>What to do:</strong> Ask for a liability cap equal to the fees paid under the contract. Most reasonable clients will agree.</p>
+
+        <h2>2. Broad IP Assignment</h2>
+        <p>
+          Some contracts include language like "all work product, including pre-existing materials, shall become the property of Client." That means your reusable components, your templates, your open-source contributions -- all of it.
+        </p>
+        <p><strong>What to do:</strong> Make sure the contract distinguishes between "work product" (what you build for them) and "pre-existing IP" (what you already had). You should retain rights to your own tools.</p>
+
+        <h2>3. Non-Compete Clauses</h2>
+        <p>
+          A non-compete that prevents you from working with the client's competitors for 12 months after the project? That can effectively shut down your business if you specialize in a niche.
+        </p>
+        <p><strong>What to do:</strong> Push back on duration and scope. A 3-month non-compete limited to direct competitors is more reasonable than a blanket 12-month ban.</p>
+
+        <h2>4. Scope Creep Without Pay Adjustment</h2>
+        <p>
+          Contracts that allow the client to "modify project requirements as needed" without a corresponding change in fees or timeline are basically giving them permission to pile on free work.
+        </p>
+        <p><strong>What to do:</strong> Include a change order process. Any scope changes beyond the original agreement should require a written amendment with updated fees.</p>
+
+        <h2>5. Vague Payment Terms</h2>
+        <p>
+          "Payment will be made upon project completion" sounds fine until you realize "completion" is never defined, and the client keeps requesting revisions. Net-90 terms are another classic trap -- that's three months before you see a dollar.
+        </p>
+        <p><strong>What to do:</strong> Define milestones with payments attached. Net-30 maximum. And always get a deposit upfront (25-50% is standard).</p>
+
+        <h2>6. One-Sided Termination</h2>
+        <p>
+          If the client can terminate at any time for any reason, but you can't -- that's a power imbalance. Even worse if there's no kill fee for work already completed.
+        </p>
+        <p><strong>What to do:</strong> Both parties should have equal termination rights. Include a clause that guarantees payment for work completed up to the termination date.</p>
+
+        <h2>7. Indemnification Without Limits</h2>
+        <p>
+          Indemnification clauses that require you to "defend, indemnify, and hold harmless" the client from any third-party claims related to your work can be incredibly broad. You could end up paying legal fees for situations you didn't cause.
+        </p>
+        <p><strong>What to do:</strong> Limit indemnification to claims directly caused by your negligence or willful misconduct. Mutual indemnification is even better.</p>
+
+        <h2>How to Catch These Automatically</h2>
+        <p>
+          Reading contracts carefully takes time, and it's easy to miss things -- especially in dense legal language. That's exactly why I built <a href="/tools/contractscan">ContractScan</a>. You upload a contract PDF, and it instantly highlights red flags like the ones above, gives you a risk score, and suggests alternative language you can propose to your client.
+        </p>
+        <p>
+          It's free for up to 3 scans a day. If you're a freelancer who signs contracts regularly, it might save you from a really expensive mistake.
+        </p>
+
+        <div class="post-cta">
+          <p><strong>Try it out:</strong> <a href="/tools/contractscan">Scan your next contract for free</a></p>
+        </div>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header {
+    margin-bottom: 3rem;
+    max-width: 700px;
+  }
+  .post-header time {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .post-header h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0.5rem 0 1rem;
+  }
+  .post-lead {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .post-body {
+    max-width: 700px;
+  }
+  .post-body h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .post-body p {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .post-body strong { color: var(--color-text); }
+  .post-body a { color: var(--color-accent); }
+  .post-body a:hover { text-decoration: underline; }
+  .post-cta {
+    margin-top: 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+  }
+  .post-cta p { margin-bottom: 0; }
+
+  @media (max-width: 640px) {
+    .post-header h1 { font-size: 1.5rem; }
+  }
+</style>

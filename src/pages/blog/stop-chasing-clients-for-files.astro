@@ -1,0 +1,179 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="Stop Chasing Clients for Files: How to Automate Your Onboarding" description="A step-by-step tutorial on automating client onboarding with PortalKit. Build a portal, share a link, collect everything in one place.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time datetime="2026-04-07">April 7, 2026</time>
+        <h1>Stop Chasing Clients for Files: How to Automate Your Onboarding</h1>
+        <p class="post-lead">A step-by-step guide to setting up a client intake portal that collects everything you need -- without the email ping-pong.</p>
+      </header>
+
+      <div class="post-body">
+        <p>Last month I counted how many "reminder" emails I sent to clients asking for files. Fourteen. In a single month. That's fourteen emails that produced zero revenue and made me feel like a nag.</p>
+
+        <p>So I automated it. Here's exactly how.</p>
+
+        <h2>The problem with email-based onboarding</h2>
+
+        <p>Let's be real about why email doesn't work for collecting client info:</p>
+
+        <ul>
+          <li>Clients forget to attach files</li>
+          <li>Information arrives in fragments across multiple threads</li>
+          <li>There's no single source of truth</li>
+          <li>You can't enforce required fields</li>
+          <li>Files get buried and you end up searching for "logo.png" across 47 emails</li>
+        </ul>
+
+        <p>The fix is simple: give clients a single link where they can submit everything at once.</p>
+
+        <h2>Tutorial: Building your client portal with PortalKit</h2>
+
+        <p>I'll walk through setting up a real onboarding portal using <a href="/tools/portalkit">PortalKit</a>. This took me about 8 minutes the first time. Now I can spin up a new one in under 3.</p>
+
+        <h3>Step 1: Create your portal</h3>
+
+        <p>Head to <a href="https://app.portalkit.dev">app.portalkit.dev</a> and create a new portal. Give it a name that makes sense for your client -- something like "Acme Corp - Website Redesign Onboarding."</p>
+
+        <h3>Step 2: Add your fields</h3>
+
+        <p>This is where the drag-and-drop builder shines. Here's the field setup I use for web design projects:</p>
+
+        <ol>
+          <li><strong>Company Name</strong> (text, required)</li>
+          <li><strong>Website URL</strong> (text)</li>
+          <li><strong>Project Goals</strong> (long text, required) -- "What do you want your new website to accomplish?"</li>
+          <li><strong>Target Audience</strong> (long text) -- "Who are your ideal customers?"</li>
+          <li><strong>Logo Files</strong> (file upload, required) -- "Upload your logo in the highest quality available"</li>
+          <li><strong>Brand Colors</strong> (text) -- "List your hex codes, or describe your preferred colors"</li>
+          <li><strong>Style References</strong> (long text) -- "Link 2-3 websites you like the look of"</li>
+          <li><strong>Content</strong> (file upload) -- "Upload any copy, images, or documents for the site"</li>
+          <li><strong>Timeline</strong> (dropdown) -- "When do you need this done?" with options like "2 weeks", "1 month", "Flexible"</li>
+          <li><strong>Anything else?</strong> (long text) -- open-ended catch-all</li>
+        </ol>
+
+        <p>The key is marking the critical fields as required. This way, clients can't submit a half-finished form.</p>
+
+        <h3>Step 3: Share the link</h3>
+
+        <p>Once your portal is built, you get a unique URL. Drop it into your welcome email. Here's the template I use:</p>
+
+        <blockquote>
+          <p>Hey [Name],</p>
+          <p>Excited to get started on [project]. To kick things off, I need a few things from you. I've set up a quick form to make it easy:</p>
+          <p>[Portal Link]</p>
+          <p>It should take about 10 minutes. Once I have everything, I'll schedule our kickoff call.</p>
+          <p>Thanks!</p>
+        </blockquote>
+
+        <h3>Step 4: Receive and review</h3>
+
+        <p>When your client submits, everything lands in your PortalKit dashboard. Files, text responses, selections -- all in one place. No digging through email.</p>
+
+        <h2>Pro tips from actual use</h2>
+
+        <h3>Keep it short</h3>
+        <p>10 fields max. If your form looks like a tax return, clients will procrastinate. Ask for the essentials now, and get details later in your kickoff call.</p>
+
+        <h3>Write clear labels</h3>
+        <p>Don't just write "Logo". Write "Upload your logo in the highest quality available (SVG or PNG preferred)." The more specific you are, the better files you get back.</p>
+
+        <h3>Set expectations in the email</h3>
+        <p>"It should take about 10 minutes" is magic. It tells the client this isn't a huge commitment, so they're more likely to do it right away instead of putting it off.</p>
+
+        <h3>Follow up once, then escalate</h3>
+        <p>If they haven't submitted in 3 days, send one friendly reminder. If they still don't, it's time for a call. Two reminders max -- after that, it's a project timeline conversation.</p>
+
+        <h2>The results</h2>
+
+        <p>Since switching to this workflow three months ago:</p>
+
+        <ul>
+          <li>Average time to get all client info: went from 11 days to 2 days</li>
+          <li>Follow-up emails per project: went from 5+ to usually 0</li>
+          <li>Client feedback: "That was so easy" (actual quote, multiple times)</li>
+        </ul>
+
+        <p>Is it a massive productivity hack? Kind of. But more than that, it just feels professional. You're not nagging. You're not scrambling. You send one link, and things move forward.</p>
+
+        <h2>Get started</h2>
+
+        <p><a href="/tools/portalkit">PortalKit's free tier</a> gives you one portal, which is enough to test this workflow with your next client. If it works for you (it will), the Pro plan gives you unlimited portals for $19/month or $49 one-time.</p>
+
+        <p>Go build your first portal. Your inbox will thank you.</p>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header {
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+  .post-header time {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .post-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.2;
+  }
+  .post-lead {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+  .post-body {
+    max-width: 700px;
+  }
+  .post-body h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.75rem 0 0.5rem;
+  }
+  .post-body p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  .post-body ul, .post-body ol {
+    color: var(--color-text-muted);
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  .post-body li {
+    margin-bottom: 0.4rem;
+  }
+  .post-body blockquote {
+    border-left: 3px solid var(--color-accent);
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.5rem;
+    background: var(--color-surface);
+    border-radius: 0 8px 8px 0;
+  }
+  .post-body blockquote p {
+    margin-bottom: 0.5rem;
+  }
+  .post-body blockquote p:last-child {
+    margin-bottom: 0;
+  }
+  .post-body a {
+    color: var(--color-accent);
+  }
+  .post-body a:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .post-header h1 { font-size: 1.5rem; }
+  }
+</style>

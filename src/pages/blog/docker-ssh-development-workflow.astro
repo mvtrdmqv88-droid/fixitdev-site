@@ -1,0 +1,195 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="How to Use Docker Containers as Instant SSH Development Environments" description="Step-by-step tutorial: use Docker containers as throwaway SSH dev environments with Sandbox CLI. Install, connect, code, disconnect, done.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time class="post-date">2026-04-07</time>
+        <h1 class="post-title">How to Use Docker Containers as Instant SSH Development Environments</h1>
+        <p class="post-meta">6 min read</p>
+      </header>
+
+      <div class="post-body">
+        <p>
+          Docker containers are perfect for throwaway development environments. But the default workflow -- writing a Dockerfile, running <code>docker exec</code>, dealing with TTY quirks -- is clunky for quick sessions.
+        </p>
+        <p>
+          In this tutorial, I'll show you how to use <a href="/tools/sandbox-cli">Sandbox CLI</a> to turn Docker containers into instant SSH development environments. One command in, one command out, auto-cleanup.
+        </p>
+
+        <h2>Prerequisites</h2>
+        <ul>
+          <li>Docker Desktop or Docker Engine running on your machine</li>
+          <li>macOS or Linux (Windows WSL2 works too)</li>
+          <li>5 minutes</li>
+        </ul>
+
+        <h2>Step 1: Install Sandbox CLI</h2>
+        <p>The fastest way is Homebrew:</p>
+        <pre class="code-block"><span class="code-prompt">$</span> brew install fixitdev/tap/sandbox</pre>
+        <p>Or if you have Go installed:</p>
+        <pre class="code-block"><span class="code-prompt">$</span> go install github.com/fixitdev/sandbox-cli@latest</pre>
+        <p>Verify the install:</p>
+        <pre class="code-block"><span class="code-prompt">$</span> sandbox version
+<span class="code-output">sandbox-cli v1.0.0</span></pre>
+
+        <h2>Step 2: Start the Daemon</h2>
+        <p>Sandbox CLI uses a lightweight Go daemon to manage containers. Start it:</p>
+        <pre class="code-block"><span class="code-prompt">$</span> sandbox daemon start
+<span class="code-output">Daemon started (PID 12345)</span></pre>
+        <p>
+          The daemon runs in the background and uses minimal resources. It talks to the Docker SDK to create containers and sets up SSH access for each one.
+        </p>
+
+        <h2>Step 3: SSH Into a Fresh Container</h2>
+        <p>This is where the magic happens:</p>
+        <pre class="code-block"><span class="code-prompt">$</span> sandbox ssh
+<span class="code-output">Creating container sandbox-a1b2... done</span>
+<span class="code-output">Starting SSH server... done</span>
+<span class="code-output">Connecting...</span>
+
+<span class="code-prompt">root@sandbox-a1b2:~#</span></pre>
+        <p>
+          You're now inside a fresh Ubuntu container. It has common dev tools pre-installed: git, curl, wget, build-essential, Node.js, Python 3. It's a real SSH session, so your terminal works exactly as you'd expect -- tab completion, vim keybindings, everything.
+        </p>
+
+        <h2>Step 4: Do Your Work</h2>
+        <p>Use it like any Linux machine:</p>
+        <pre class="code-block"><span class="code-prompt">root@sandbox-a1b2:~#</span> git clone https://github.com/yourproject/repo.git
+<span class="code-prompt">root@sandbox-a1b2:~#</span> cd repo && npm install
+<span class="code-prompt">root@sandbox-a1b2:~#</span> npm run dev
+<span class="code-output">Server running on http://localhost:3000</span></pre>
+        <p>
+          Need to install something? Go ahead. It's a throwaway environment. <code>apt-get install whatever-you-want</code> without a second thought.
+        </p>
+
+        <h2>Step 5: Disconnect</h2>
+        <p>When you're done, just exit:</p>
+        <pre class="code-block"><span class="code-prompt">root@sandbox-a1b2:~#</span> exit
+<span class="code-output">Connection closed.</span>
+<span class="code-output">Container sandbox-a1b2 destroyed.</span></pre>
+        <p>
+          The container is gone. All the packages you installed, all the files you created, all the config changes you made -- cleaned up automatically.
+        </p>
+
+        <h2>Useful Options</h2>
+
+        <h3>Mount a local directory</h3>
+        <p>Need to work on local files inside the container?</p>
+        <pre class="code-block"><span class="code-prompt">$</span> sandbox ssh --volume ./myproject:/workspace</pre>
+        <p>Your local <code>./myproject</code> is now available at <code>/workspace</code> inside the container. Changes persist on your host machine even after the container is destroyed.</p>
+
+        <h3>Use a custom image</h3>
+        <p>Don't want Ubuntu? Use any Docker image:</p>
+        <pre class="code-block"><span class="code-prompt">$</span> sandbox ssh --image node:20-slim</pre>
+
+        <h3>Check active sessions</h3>
+        <p>See what's running:</p>
+        <pre class="code-block"><span class="code-prompt">$</span> sandbox ls
+<span class="code-output">ID              IMAGE           STATUS    UPTIME</span>
+<span class="code-output">sandbox-a1b2    ubuntu:latest   running   12m</span>
+<span class="code-output">sandbox-c3d4    node:20-slim    running   3m</span></pre>
+
+        <h3>Web Dashboard</h3>
+        <p>Prefer a visual overview? Sandbox CLI ships with a Next.js dashboard:</p>
+        <pre class="code-block"><span class="code-prompt">$</span> sandbox dashboard
+<span class="code-output">Dashboard running at http://localhost:9090</span></pre>
+        <p>You'll see active containers, session history, and resource usage at a glance.</p>
+
+        <h2>Free vs Pro</h2>
+        <p>
+          The free tier gives you 3 containers per day with 30-minute sessions. That's enough for quick experiments and tutorials.
+        </p>
+        <p>
+          If you're using Sandbox CLI as part of your daily workflow, the Pro plan ($4.99/month) removes all limits: unlimited containers, no time restrictions.
+        </p>
+
+        <h2>Wrapping Up</h2>
+        <p>
+          That's the whole workflow. Install, <code>sandbox ssh</code>, code, exit, gone. No Dockerfiles to write, no docker-compose to manage, no cleanup to remember.
+        </p>
+        <p>
+          I built <a href="/tools/sandbox-cli">Sandbox CLI</a> because I was tired of polluting my laptop with tools I only needed once. If that sounds familiar, give it a try.
+        </p>
+
+        <div class="post-cta">
+          <a href="/tools/sandbox-cli" class="cta-link">Install Sandbox CLI -- one command to a fresh dev environment</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header { margin-bottom: 2.5rem; max-width: 700px; }
+  .post-date { color: var(--color-text-muted); font-size: 0.85rem; }
+  .post-title { font-size: 2rem; font-weight: 800; margin: 0.5rem 0 0.75rem; line-height: 1.3; }
+  .post-meta { color: var(--color-text-muted); font-size: 0.85rem; }
+
+  .post-body {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .post-body p { margin-bottom: 1.25rem; }
+  .post-body h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.75rem 0 0.75rem;
+  }
+  .post-body ul {
+    margin-bottom: 1.25rem;
+    padding-left: 1.25rem;
+  }
+  .post-body li {
+    margin-bottom: 0.5rem;
+    color: var(--color-text-muted);
+  }
+  .post-body code {
+    background: var(--color-surface);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+  .post-body a { color: var(--color-accent); }
+
+  .code-block {
+    background: #0d0d0d;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+    overflow-x: auto;
+  }
+  .code-prompt { color: var(--color-success); }
+  .code-output { color: var(--color-text-muted); }
+
+  .post-cta {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .cta-link {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  @media (max-width: 640px) {
+    .post-title { font-size: 1.5rem; }
+  }
+</style>

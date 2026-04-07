@@ -1,0 +1,142 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="The Complete Guide to Client Onboarding for Freelancers" description="Learn how to onboard clients professionally as a freelancer. Reduce back-and-forth emails, collect assets faster, and start projects sooner.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time datetime="2026-04-07">April 7, 2026</time>
+        <h1>The Complete Guide to Client Onboarding for Freelancers</h1>
+        <p class="post-lead">If you're a freelancer who has ever started a project with incomplete info, this guide is for you. Let's fix that.</p>
+      </header>
+
+      <div class="post-body">
+        <p>Here's a pattern every freelancer knows too well: you land a new client, celebrate for about 30 seconds, and then spend the next two weeks trying to get their logo, brand guidelines, login credentials, and content -- all through a painful email chain that makes you question your career choices.</p>
+
+        <p>Client onboarding doesn't have to suck. In this guide, I'll walk through everything I've learned about getting client info collected quickly, professionally, and without losing your mind.</p>
+
+        <h2>Why client onboarding matters</h2>
+
+        <p>Bad onboarding costs you money. Every day you spend waiting for a file is a day you're not billing. Every email you send asking "hey, did you get a chance to send that?" is time you could spend doing actual work.</p>
+
+        <p>But it's not just about time. A sloppy onboarding process makes you look unprofessional. Your client's first real experience working with you shouldn't be a confusing email thread.</p>
+
+        <h2>The three biggest onboarding mistakes</h2>
+
+        <h3>1. Asking for everything via email</h3>
+        <p>Email was not designed for collecting structured information. Things get buried, attachments get lost, and you end up with five threads about the same project. It's a mess.</p>
+
+        <h3>2. No checklist or template</h3>
+        <p>If you're making up what to ask for each time, you're going to forget something. Every. Single. Time. You need a reusable template that covers all the bases for your type of work.</p>
+
+        <h3>3. Making it hard for the client</h3>
+        <p>If your client has to create an account, download an app, or figure out a complicated tool just to send you their logo, you've already lost. The easier you make it for them, the faster you get what you need.</p>
+
+        <h2>What to collect during onboarding</h2>
+
+        <p>This varies by industry, but here's a solid starting point for most freelancers:</p>
+
+        <ul>
+          <li><strong>Business info</strong> -- company name, website, industry, contact person</li>
+          <li><strong>Brand assets</strong> -- logo files, brand colors, fonts, style guide</li>
+          <li><strong>Project details</strong> -- goals, target audience, timeline, budget notes</li>
+          <li><strong>Content</strong> -- copy, images, existing materials to reference</li>
+          <li><strong>Access credentials</strong> -- CMS logins, hosting details, analytics access</li>
+          <li><strong>Communication preferences</strong> -- preferred channel, availability, decision makers</li>
+        </ul>
+
+        <h2>How to build your onboarding process</h2>
+
+        <p>You have a few options, and I'll be honest about the pros and cons of each:</p>
+
+        <h3>Option 1: Google Forms</h3>
+        <p>Free and easy. But it looks generic, file uploads are clunky, and your client might not take it seriously. Fine for a side gig, not great for a $5k+ project.</p>
+
+        <h3>Option 2: Notion or Airtable</h3>
+        <p>More polished, but requires your client to interact with a tool they probably don't know. And the setup on your end is more work than it needs to be.</p>
+
+        <h3>Option 3: A dedicated client portal tool</h3>
+        <p>This is what I ended up doing. Tools like <a href="/tools/portalkit">PortalKit</a> let you build a custom portal with exactly the fields you need, share a single link, and your client fills it out without creating an account. It's the workflow I wish I had years ago.</p>
+
+        <h2>My recommended onboarding workflow</h2>
+
+        <ol>
+          <li><strong>Before signing</strong> -- Have a standard questionnaire ready. Don't reinvent the wheel for each client.</li>
+          <li><strong>Right after signing</strong> -- Send a welcome email with your portal link. Keep the tone friendly and the instructions clear.</li>
+          <li><strong>Set a deadline</strong> -- Give them 3-5 business days. People respond to deadlines.</li>
+          <li><strong>One follow-up</strong> -- If they haven't completed it in 3 days, send one gentle reminder. After that, it's a conversation about the project timeline.</li>
+          <li><strong>Kick off</strong> -- Once you have everything, schedule the kickoff call. Don't start work before you have what you need.</li>
+        </ol>
+
+        <h2>Templates matter more than tools</h2>
+
+        <p>The best tool in the world won't save you if you're asking the wrong questions. Spend time thinking about what information you actually need to start a project. Write it down. Refine it after every project. Your template should get better over time.</p>
+
+        <p>The tool just makes delivery easier. I use <a href="/tools/portalkit">PortalKit</a> because it took me 10 minutes to set up and my clients actually complete the form, but the real value is in knowing what to ask.</p>
+
+        <h2>Wrapping up</h2>
+
+        <p>Client onboarding is one of those things that's easy to ignore and painful to do poorly. But once you have a system in place, every new project starts smoother, faster, and more professionally.</p>
+
+        <p>If you're still doing onboarding over email, try building a simple portal. <a href="/tools/portalkit">PortalKit has a free tier</a> that lets you create one portal -- enough to see if it actually makes a difference. (Spoiler: it does.)</p>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header {
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+  .post-header time {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .post-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.2;
+  }
+  .post-lead {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+  .post-body {
+    max-width: 700px;
+  }
+  .post-body h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.75rem 0 0.5rem;
+  }
+  .post-body p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  .post-body ul, .post-body ol {
+    color: var(--color-text-muted);
+    margin: 0.5rem 0 1.5rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  .post-body li {
+    margin-bottom: 0.4rem;
+  }
+  .post-body a {
+    color: var(--color-accent);
+  }
+  .post-body a:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .post-header h1 { font-size: 1.5rem; }
+  }
+</style>

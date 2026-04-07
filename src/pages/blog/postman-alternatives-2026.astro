@@ -1,0 +1,194 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="5 Lightweight Postman Alternatives for Developers Who Just Want to Test APIs" description="Tired of Postman's bloat and mandatory login? Here are 5 lightweight API testing tools that get out of your way and let you work.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time datetime="2026-04-07">April 7, 2026</time>
+        <h1>5 Lightweight Postman Alternatives for Developers Who Just Want to Test APIs</h1>
+        <p class="post-lead">
+          Postman used to be the go-to. Now it's a 500MB Electron app that wants your email before you can send a GET request. If you're looking for something simpler, here are five tools worth trying.
+        </p>
+      </header>
+
+      <section class="post-body">
+        <h2>Why Developers Are Looking for Alternatives</h2>
+        <p>
+          Let's be honest: Postman is powerful. But for most day-to-day API testing, it's overkill. You don't need team collaboration features, cloud sync, or AI-generated tests when you just want to check if your endpoint returns the right JSON.
+        </p>
+        <p>
+          The shift toward mandatory accounts and cloud storage has also raised legitimate privacy concerns. If you're working with auth tokens, API keys, or staging credentials, having them automatically synced to a third-party server is... not ideal.
+        </p>
+        <p>
+          Here are five alternatives that prioritize simplicity, speed, and keeping your data local.
+        </p>
+
+        <hr />
+
+        <h2>1. SwiftAPI</h2>
+        <p><strong>Best for:</strong> Developers who want a full-featured HTTP client without installing anything.</p>
+        <p>
+          <a href="/tools/swiftapi">SwiftAPI</a> runs entirely in the browser. No download, no login, no cloud sync. You open the URL, build your request, hit send. Your data is stored in LocalStorage and IndexedDB — nothing leaves your device.
+        </p>
+        <p>
+          It supports all HTTP methods, has a syntax-highlighted response viewer, request history, collections, and can even import your existing Postman collections. The free tier includes all core features; a Pro upgrade ($29 one-time) adds environment variables and collection export/import.
+        </p>
+        <p>
+          If you're the kind of developer who keeps a dozen browser tabs open and doesn't want another desktop app eating RAM, SwiftAPI fits right into your workflow.
+        </p>
+        <p><a href="https://swiftapi.fixitdev.com">Try SwiftAPI free</a></p>
+
+        <hr />
+
+        <h2>2. Insomnia</h2>
+        <p><strong>Best for:</strong> Developers who prefer a native desktop app with a clean UI.</p>
+        <p>
+          Insomnia has been the "other" API client for years. It's well-designed, supports GraphQL natively, and has good plugin support. The open-source core is still usable, though Kong has been pushing more features behind their cloud offering.
+        </p>
+        <p>
+          Worth noting: Insomnia also introduced mandatory login in 2023, which caused some community backlash. Some users have stayed on older versions or forked the project.
+        </p>
+
+        <hr />
+
+        <h2>3. Bruno</h2>
+        <p><strong>Best for:</strong> Teams that want collections stored as files in their git repo.</p>
+        <p>
+          Bruno takes an interesting approach: your API collections are saved as plain files on your filesystem. This means you can version-control them alongside your code. It's offline-first, open-source, and has no cloud sync by design.
+        </p>
+        <p>
+          The trade-off is that it's a desktop app (Electron), so you're still looking at a download and some memory overhead.
+        </p>
+
+        <hr />
+
+        <h2>4. HTTPie (Web &amp; CLI)</h2>
+        <p><strong>Best for:</strong> Developers who love the command line but sometimes want a visual interface.</p>
+        <p>
+          HTTPie started as a great CLI tool (and still is). They've since added a web app and desktop app. The CLI remains the star — it's the most readable way to make HTTP requests from your terminal.
+        </p>
+        <p>
+          The web/desktop versions are polished but less mature than Postman. If you're primarily a terminal user who occasionally needs a GUI, HTTPie covers both bases.
+        </p>
+
+        <hr />
+
+        <h2>5. curl + jq</h2>
+        <p><strong>Best for:</strong> Minimalists and shell scripting enthusiasts.</p>
+        <p>
+          The OG API testing setup. <code>curl</code> for requests, <code>jq</code> for JSON parsing. Zero UI, zero overhead, infinite flexibility. If you can remember the flags (or have a good alias file), this is the most lightweight option possible.
+        </p>
+        <p>
+          The downside: no saved collections, no visual response inspection, and building complex requests with multiple headers and a JSON body gets verbose fast.
+        </p>
+
+        <hr />
+
+        <h2>Which One Should You Pick?</h2>
+        <p>
+          It depends on what matters to you:
+        </p>
+        <ul>
+          <li><strong>Zero install, browser-based:</strong> <a href="/tools/swiftapi">SwiftAPI</a></li>
+          <li><strong>Desktop app, GraphQL support:</strong> Insomnia</li>
+          <li><strong>Git-friendly collections:</strong> Bruno</li>
+          <li><strong>CLI-first workflow:</strong> HTTPie or curl</li>
+        </ul>
+        <p>
+          Personally, I built <a href="/tools/swiftapi">SwiftAPI</a> because I wanted something I could open in a new tab without thinking about it. No waiting for Electron to boot, no "please sign in" screen. Just a text field and a send button.
+        </p>
+        <p>
+          But every developer's workflow is different. Try a couple and see what sticks.
+        </p>
+
+        <div class="post-cta">
+          <p><strong>Give SwiftAPI a try</strong> — it takes about 5 seconds to send your first request. No sign-up required.</p>
+          <a href="https://swiftapi.fixitdev.com" class="btn btn-primary">Open SwiftAPI</a>
+        </div>
+      </section>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header { margin-bottom: 2.5rem; }
+  .post-header time {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .post-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.3;
+  }
+  .post-lead {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    max-width: 650px;
+  }
+  .post-body {
+    max-width: 700px;
+  }
+  .post-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .post-body p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+  .post-body ul {
+    color: var(--color-text-muted);
+    margin: 0.5rem 0 1rem 1.25rem;
+  }
+  .post-body li { margin-bottom: 0.4rem; }
+  .post-body strong { color: var(--color-text); }
+  .post-body a { color: var(--color-accent); }
+  .post-body code {
+    background: var(--color-surface);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+  }
+  .post-body hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 2rem 0;
+  }
+  .post-cta {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .post-cta p {
+    color: var(--color-text) !important;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .btn:hover { text-decoration: none; }
+  .btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--color-accent-hover); }
+
+  @media (max-width: 640px) {
+    .post-header h1 { font-size: 1.5rem; }
+  }
+</style>

@@ -1,0 +1,204 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="How to Keep Your Dev Machine Clean (Without Sacrificing Productivity)" description="Practical tips to stop your development machine from becoming a graveyard of forgotten tools. Version managers, containers, and the disposable environment approach.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time class="post-date">2026-04-07</time>
+        <h1 class="post-title">How to Keep Your Dev Machine Clean (Without Sacrificing Productivity)</h1>
+        <p class="post-meta">7 min read</p>
+      </header>
+
+      <div class="post-body">
+        <p>
+          I reformatted my laptop last year and it took an entire day to get everything back to a working state. Halfway through, I realized I was reinstalling tools I hadn't used in months. That's when I decided to change how I manage my dev environment.
+        </p>
+        <p>
+          If your machine feels sluggish, if <code>which python</code> gives you existential dread, or if you have no idea what half the things in <code>/usr/local/bin</code> are -- this post is for you.
+        </p>
+
+        <h2>The Problem: Accumulation</h2>
+        <p>
+          Developers install things. A lot of things. And almost nobody uninstalls them afterward. Every tutorial, every side project, every "let me just try this real quick" leaves behind packages, config files, and background services.
+        </p>
+        <p>
+          After a year or two, your machine is running services you forgot about, has conflicting versions of the same tool, and takes twice as long to boot.
+        </p>
+
+        <h2>Tip 1: Use Version Managers, Not Direct Installs</h2>
+        <p>
+          Never install programming languages directly. Always use a version manager:
+        </p>
+        <ul>
+          <li><strong>Node.js:</strong> Use <code>fnm</code> or <code>nvm</code> instead of installing from nodejs.org</li>
+          <li><strong>Python:</strong> Use <code>pyenv</code> instead of the system Python</li>
+          <li><strong>Ruby:</strong> Use <code>rbenv</code> or <code>asdf</code></li>
+          <li><strong>Java:</strong> Use <code>sdkman</code></li>
+        </ul>
+        <p>
+          Version managers let you switch between versions per-project and make cleanup straightforward. When you no longer need a version, <code>nvm uninstall 16</code> and it's gone.
+        </p>
+
+        <h2>Tip 2: Prefer Project-Local Dependencies</h2>
+        <p>
+          Every <code>npm install -g</code> is a small mess you'll forget about later. Prefer local installs:
+        </p>
+        <ul>
+          <li>Use <code>npx</code> instead of global npm installs</li>
+          <li>Use project-level virtual environments for Python (<code>python -m venv .venv</code>)</li>
+          <li>Use <code>cargo install</code> with <code>--root</code> for Rust tools</li>
+        </ul>
+        <p>
+          When the project directory is deleted, the dependencies go with it.
+        </p>
+
+        <h2>Tip 3: Containers for Experimentation</h2>
+        <p>
+          This is the big one. If you want to try a new database, a new language, or a new tool -- don't install it on your host machine. Use a container.
+        </p>
+        <p>
+          Want to try PostgreSQL 16? Don't install it. Run it in Docker:
+        </p>
+        <pre class="code-block"><span class="code-prompt">$</span> docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=test postgres:16</pre>
+        <p>
+          When you <code>Ctrl+C</code>, it's gone. Your machine has no idea PostgreSQL was ever there.
+        </p>
+        <p>
+          For a more general-purpose approach, tools like <a href="/tools/sandbox-cli">Sandbox CLI</a> let you spin up a full throwaway Linux environment via SSH:
+        </p>
+        <pre class="code-block"><span class="code-prompt">$</span> sandbox ssh
+<span class="code-output">root@sandbox-7f3a:~#</span> apt-get install postgresql-16
+<span class="code-comment"># experiment freely...</span>
+<span class="code-prompt">root@sandbox-7f3a:~#</span> exit
+<span class="code-output">Container destroyed.</span></pre>
+        <p>
+          Install whatever you want inside the container. When you disconnect, everything is cleaned up automatically. Your host machine stays untouched.
+        </p>
+
+        <h2>Tip 4: Audit What's Running in the Background</h2>
+        <p>
+          You'd be surprised how many background services accumulate. Check what's running:
+        </p>
+        <pre class="code-block"><span class="code-comment"># macOS</span>
+<span class="code-prompt">$</span> launchctl list | grep -v com.apple
+<span class="code-comment"># Linux</span>
+<span class="code-prompt">$</span> systemctl list-units --type=service --state=running</pre>
+        <p>
+          I found MySQL, Redis, and a MongoDB instance that had been running since I tried them for a project eight months ago. All of them gone now.
+        </p>
+
+        <h2>Tip 5: Regular Cleanup Schedule</h2>
+        <p>
+          Set a calendar reminder every 3 months to:
+        </p>
+        <ul>
+          <li>Run <code>brew cleanup</code> (macOS) or check for orphaned packages</li>
+          <li>Review <code>docker images</code> and <code>docker system prune</code></li>
+          <li>Delete project directories you're no longer working on</li>
+          <li>Check for unused version manager installs (<code>nvm ls</code>, <code>pyenv versions</code>)</li>
+          <li>Review background services and disable what you don't need</li>
+        </ul>
+        <p>
+          15 minutes every quarter keeps things manageable.
+        </p>
+
+        <h2>Tip 6: Use Disposable Environments by Default</h2>
+        <p>
+          The nuclear option -- and honestly my favorite approach. Instead of trying to keep your machine clean retroactively, just stop installing things on it in the first place.
+        </p>
+        <p>
+          My current setup: my host machine has Docker, my editor, a terminal, and <a href="/tools/sandbox-cli">Sandbox CLI</a>. That's it. When I need to test something, I run <code>sandbox ssh</code> and do it in a disposable container. The free tier gives you 3 containers per day, which covers most quick experiments. The Pro plan ($4.99/month) is unlimited if you want to go all-in on this approach.
+        </p>
+        <p>
+          Is it a bit extreme? Maybe. But my laptop hasn't slowed down in a year, and <code>which python</code> only returns one result.
+        </p>
+
+        <h2>The Bottom Line</h2>
+        <p>
+          A clean dev machine isn't about being obsessive -- it's about reducing the surface area for weird bugs, conflicts, and "why is this broken" debugging sessions. The less stuff on your host machine, the fewer things can go wrong.
+        </p>
+        <p>
+          Start with version managers and local dependencies. Add containers for experimentation. If you want the simplest possible approach, check out <a href="/tools/sandbox-cli">Sandbox CLI</a> for instant throwaway environments.
+        </p>
+        <p>
+          Your future self (and your laptop's SSD) will thank you.
+        </p>
+
+        <div class="post-cta">
+          <a href="/tools/sandbox-cli" class="cta-link">Try Sandbox CLI -- keep your machine clean, effortlessly</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header { margin-bottom: 2.5rem; max-width: 700px; }
+  .post-date { color: var(--color-text-muted); font-size: 0.85rem; }
+  .post-title { font-size: 2rem; font-weight: 800; margin: 0.5rem 0 0.75rem; line-height: 1.3; }
+  .post-meta { color: var(--color-text-muted); font-size: 0.85rem; }
+
+  .post-body {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .post-body p { margin-bottom: 1.25rem; }
+  .post-body h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+  }
+  .post-body ul {
+    margin-bottom: 1.25rem;
+    padding-left: 1.25rem;
+  }
+  .post-body li {
+    margin-bottom: 0.5rem;
+    color: var(--color-text-muted);
+  }
+  .post-body li strong { color: var(--color-text); }
+  .post-body code {
+    background: var(--color-surface);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+  .post-body a { color: var(--color-accent); }
+
+  .code-block {
+    background: #0d0d0d;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+    overflow-x: auto;
+  }
+  .code-prompt { color: var(--color-success); }
+  .code-output { color: var(--color-text-muted); }
+  .code-comment { color: #555; }
+
+  .post-cta {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .cta-link {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  @media (max-width: 640px) {
+    .post-title { font-size: 1.5rem; }
+  }
+</style>

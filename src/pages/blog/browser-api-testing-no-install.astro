@@ -1,0 +1,218 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="How to Test APIs Directly in Your Browser -- No Install Required" description="Learn how to test REST APIs from your browser without downloading any software. Step-by-step tutorial using SwiftAPI, a free browser-based HTTP client.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time datetime="2026-04-07">April 7, 2026</time>
+        <h1>How to Test APIs Directly in Your Browser — No Install Required</h1>
+        <p class="post-lead">
+          You don't need a desktop app to test APIs. Here's how to send HTTP requests, inspect responses, and organize collections right from a browser tab.
+        </p>
+      </header>
+
+      <section class="post-body">
+        <h2>Why Test APIs in the Browser?</h2>
+        <p>
+          If you've ever needed to quickly check an API response — maybe you're debugging a frontend issue, or verifying that your backend returns the right data — installing a desktop app feels like overkill. You already have a browser open. Why not use it?
+        </p>
+        <p>
+          Browser-based API testing tools have a few advantages:
+        </p>
+        <ul>
+          <li>No download or installation</li>
+          <li>Works on any OS (Windows, Mac, Linux, Chromebook)</li>
+          <li>No account creation or login</li>
+          <li>Instant startup — it's just a web page</li>
+        </ul>
+        <p>
+          In this tutorial, I'll walk you through testing APIs using <a href="/tools/swiftapi">SwiftAPI</a>, a free browser-based HTTP client I built specifically for this workflow.
+        </p>
+
+        <h2>Step 1: Open SwiftAPI</h2>
+        <p>
+          Go to <a href="https://swiftapi.fixitdev.com">swiftapi.fixitdev.com</a>. That's it. No sign-up form, no "create workspace" wizard. You'll see a clean interface with a URL bar, method selector, and a send button.
+        </p>
+
+        <h2>Step 2: Send a GET Request</h2>
+        <p>
+          Let's start simple. We'll hit a public API to see how it works.
+        </p>
+        <ol>
+          <li>Make sure the method dropdown is set to <strong>GET</strong></li>
+          <li>Enter this URL: <code>https://jsonplaceholder.typicode.com/posts/1</code></li>
+          <li>Click <strong>Send</strong></li>
+        </ol>
+        <p>
+          You should see the response instantly: a JSON object with <code>userId</code>, <code>id</code>, <code>title</code>, and <code>body</code> fields. The response viewer shows:
+        </p>
+        <ul>
+          <li>HTTP status code (200 OK)</li>
+          <li>Response time</li>
+          <li>Syntax-highlighted JSON body</li>
+          <li>Response headers</li>
+        </ul>
+
+        <h2>Step 3: Send a POST Request with a Body</h2>
+        <p>
+          Now let's try creating data.
+        </p>
+        <ol>
+          <li>Change the method to <strong>POST</strong></li>
+          <li>URL: <code>https://jsonplaceholder.typicode.com/posts</code></li>
+          <li>Click the <strong>Headers</strong> tab and add: <code>Content-Type: application/json</code></li>
+          <li>Click the <strong>Body</strong> tab and enter:</li>
+        </ol>
+        <pre><code>{`{
+  "title": "Testing from SwiftAPI",
+  "body": "This is a test post.",
+  "userId": 1
+}`}</code></pre>
+        <ol start="5">
+          <li>Click <strong>Send</strong></li>
+        </ol>
+        <p>
+          You should get a <code>201 Created</code> response with the created object, including an <code>id</code> field.
+        </p>
+
+        <h2>Step 4: Save Requests to a Collection</h2>
+        <p>
+          If you're testing the same endpoints repeatedly (which, let's be real, we all do), saving them to a collection saves time.
+        </p>
+        <ol>
+          <li>After sending a request, click <strong>Save to Collection</strong></li>
+          <li>Give it a name like "JSONPlaceholder Tests"</li>
+          <li>Name the request (e.g., "Get Post #1")</li>
+        </ol>
+        <p>
+          Your collection shows up in the sidebar. Click any saved request to load it instantly. All of this is stored in your browser's IndexedDB — no cloud, no account.
+        </p>
+
+        <h2>Step 5: Import Postman Collections (Optional)</h2>
+        <p>
+          If you're migrating from Postman, you can bring your existing collections with you:
+        </p>
+        <ol>
+          <li>In Postman, export your collection as JSON (Collection v2.1 format)</li>
+          <li>In SwiftAPI, click <strong>Import</strong> and select the file</li>
+          <li>Your requests, headers, and body data will be imported automatically</li>
+        </ol>
+
+        <h2>When Browser-Based Testing Makes Sense</h2>
+        <p>
+          Browser-based tools like SwiftAPI work great for:
+        </p>
+        <ul>
+          <li>Quick one-off requests while debugging</li>
+          <li>Working on machines where you can't install software</li>
+          <li>Keeping API credentials off third-party servers</li>
+          <li>Teaching or pair programming (just share the URL)</li>
+        </ul>
+        <p>
+          For heavy automation, scripting, or CI/CD pipelines, you'll still want CLI tools like curl or HTTPie. But for interactive testing? A browser tab is all you need.
+        </p>
+
+        <div class="post-cta">
+          <p><strong>Try it yourself</strong> — open SwiftAPI and send your first request. Takes about 5 seconds.</p>
+          <a href="https://swiftapi.fixitdev.com" class="btn btn-primary">Open SwiftAPI</a>
+        </div>
+      </section>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header { margin-bottom: 2.5rem; }
+  .post-header time {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .post-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.3;
+  }
+  .post-lead {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    max-width: 650px;
+  }
+  .post-body {
+    max-width: 700px;
+  }
+  .post-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .post-body p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+  .post-body ul, .post-body ol {
+    color: var(--color-text-muted);
+    margin: 0.5rem 0 1rem 1.25rem;
+  }
+  .post-body li { margin-bottom: 0.4rem; }
+  .post-body strong { color: var(--color-text); }
+  .post-body a { color: var(--color-accent); }
+  .post-body code {
+    background: var(--color-surface);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+  }
+  .post-body pre {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+  .post-body pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  .post-body hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 2rem 0;
+  }
+  .post-cta {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .post-cta p {
+    color: var(--color-text) !important;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .btn:hover { text-decoration: none; }
+  .btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--color-accent-hover); }
+
+  @media (max-width: 640px) {
+    .post-header h1 { font-size: 1.5rem; }
+  }
+</style>

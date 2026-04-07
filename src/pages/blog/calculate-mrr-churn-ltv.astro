@@ -1,0 +1,254 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="How to Calculate MRR, Churn Rate, and LTV for Your SaaS" description="Step-by-step guide to calculating the three most important SaaS metrics: MRR, Churn Rate, and Customer Lifetime Value. With formulas and real examples.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time datetime="2026-04-07">April 7, 2026</time>
+        <h1>How to Calculate MRR, Churn Rate, and LTV for Your SaaS</h1>
+        <p class="post-lead">
+          The formulas aren't complicated. The hard part is knowing where to get the numbers and what to do with them. Let's fix both.
+        </p>
+      </header>
+
+      <div class="post-body">
+        <p>
+          I'm going to assume you have a SaaS product, some paying customers, and a Stripe account. If that's you, this guide will walk you through calculating the three most critical metrics: MRR, Churn Rate, and LTV.
+        </p>
+        <p>
+          No MBA required.
+        </p>
+
+        <h2>Part 1: Calculating MRR (Monthly Recurring Revenue)</h2>
+
+        <h3>The basic formula</h3>
+        <p>
+          <strong>MRR = Sum of all active subscription amounts, normalized to monthly</strong>
+        </p>
+        <p>
+          "Normalized to monthly" means: if someone is on a $120/year plan, their contribution to MRR is $10/month. If someone is on a $20/month plan, it's $20.
+        </p>
+
+        <h3>Example</h3>
+        <p>
+          Let's say you have:
+        </p>
+        <ul>
+          <li>5 customers on a $19/month plan = $95</li>
+          <li>3 customers on a $49/month plan = $147</li>
+          <li>1 customer on a $199/year plan = $16.58</li>
+        </ul>
+        <p>
+          <strong>MRR = $95 + $147 + $16.58 = $258.58</strong>
+        </p>
+
+        <h3>Breaking MRR into components</h3>
+        <p>
+          Raw MRR is useful, but the breakdown tells the real story:
+        </p>
+        <ul>
+          <li><strong>New MRR:</strong> Revenue from brand new customers this month</li>
+          <li><strong>Expansion MRR:</strong> Revenue increase from existing customers (upgrades)</li>
+          <li><strong>Contraction MRR:</strong> Revenue decrease from existing customers (downgrades)</li>
+          <li><strong>Churned MRR:</strong> Revenue lost from customers who cancelled</li>
+        </ul>
+        <p>
+          <strong>Net New MRR = New + Expansion - Contraction - Churned</strong>
+        </p>
+        <p>
+          If your Net New MRR is positive, you're growing. If it's negative, you have a problem.
+        </p>
+
+        <h2>Part 2: Calculating Churn Rate</h2>
+
+        <h3>Customer churn rate</h3>
+        <p>
+          <strong>Customer Churn Rate = (Customers lost during period / Customers at start of period) x 100</strong>
+        </p>
+
+        <h3>Example</h3>
+        <p>
+          Start of month: 100 customers. End of month: 95 customers (5 cancelled).
+        </p>
+        <p>
+          <strong>Churn Rate = (5 / 100) x 100 = 5%</strong>
+        </p>
+
+        <h3>Revenue churn rate</h3>
+        <p>
+          Customer churn treats all customers equally. Revenue churn accounts for the fact that losing a $200/mo customer hurts more than losing a $10/mo customer.
+        </p>
+        <p>
+          <strong>Revenue Churn Rate = (MRR lost from cancellations and downgrades / MRR at start of period) x 100</strong>
+        </p>
+
+        <h3>What's a good churn rate?</h3>
+        <table>
+          <tr><th>Monthly Churn</th><th>Assessment</th></tr>
+          <tr><td>Under 2%</td><td>Excellent</td></tr>
+          <tr><td>2-5%</td><td>Normal for early-stage SaaS</td></tr>
+          <tr><td>5-7%</td><td>Getting risky</td></tr>
+          <tr><td>Over 7%</td><td>Red flag, needs immediate attention</td></tr>
+        </table>
+
+        <h3>Why compounding makes churn scary</h3>
+        <p>
+          At 5% monthly churn with no new customers, here's what happens to 100 customers:
+        </p>
+        <ul>
+          <li>Month 3: 86 customers</li>
+          <li>Month 6: 74 customers</li>
+          <li>Month 12: 54 customers</li>
+        </ul>
+        <p>
+          You lost nearly half your customer base in a year. This is why even "small" churn rates matter enormously.
+        </p>
+
+        <h2>Part 3: Calculating LTV (Customer Lifetime Value)</h2>
+
+        <h3>The simple formula</h3>
+        <p>
+          <strong>LTV = ARPU / Monthly Churn Rate</strong>
+        </p>
+        <p>
+          Where ARPU (Average Revenue Per User) = MRR / number of active customers.
+        </p>
+
+        <h3>Example</h3>
+        <p>
+          MRR = $2,000. Active customers = 80. Monthly churn = 4%.
+        </p>
+        <ul>
+          <li>ARPU = $2,000 / 80 = $25</li>
+          <li>LTV = $25 / 0.04 = $625</li>
+        </ul>
+        <p>
+          Each customer is worth, on average, $625 over their lifetime. This means if you spend less than $625 to acquire a customer, you're (eventually) profitable on that customer.
+        </p>
+
+        <h3>Why LTV matters for indie founders</h3>
+        <p>
+          Most indie founders don't do paid acquisition. But LTV still matters because it tells you:
+        </p>
+        <ul>
+          <li>How much you <em>could</em> spend on marketing if you wanted to</li>
+          <li>Whether your pricing supports a sustainable business</li>
+          <li>If you should focus more on reducing churn or increasing prices</li>
+        </ul>
+        <p>
+          A low LTV usually means either your price is too low, your churn is too high, or both. Either way, you need to know the number to fix the problem.
+        </p>
+
+        <h2>OK, I know the formulas. Now what?</h2>
+        <p>
+          The formulas are the easy part. The hard part is actually calculating them regularly from your real data. You have a few options:
+        </p>
+        <ol>
+          <li><strong>Do it manually.</strong> Export Stripe data, open a spreadsheet, plug in formulas. Works for month 1. Becomes painful by month 3.</li>
+          <li><strong>Build a script.</strong> Hit the Stripe API, aggregate the data, output the numbers. Doable if you enjoy that kind of thing. Most people don't.</li>
+          <li><strong>Use a tool that does it for you.</strong> This is where something like <a href="/tools/mrrscope">MRRScope</a> comes in. It connects to Stripe, calculates all of these metrics automatically, and shows you charts that update daily. The free demo mode lets you explore with sample data before connecting anything.</li>
+        </ol>
+
+        <p>
+          The important thing is to actually track these numbers, not just read about them. The sooner you have visibility into your MRR, churn, and LTV, the sooner you can make smart decisions about your product and pricing.
+        </p>
+
+        <div class="post-cta">
+          <h3>See these metrics calculated automatically</h3>
+          <p><a href="/tools/mrrscope">MRRScope</a> connects to Stripe and shows you MRR, Churn, LTV and more — no spreadsheets required. Try the free demo.</p>
+          <a href="/tools/mrrscope" class="cta-btn">Try MRRScope Free</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header {
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+  .post-header time {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .post-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.25;
+  }
+  .post-lead {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+  .post-body {
+    max-width: 700px;
+  }
+  .post-body p, .post-body li, .post-body td, .post-body th {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .post-body h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+    color: var(--color-text);
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.5rem;
+    color: var(--color-text);
+  }
+  .post-body ol, .post-body ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .post-body a { color: var(--color-accent); }
+  .post-body strong { color: var(--color-text); }
+  .post-body em { font-style: italic; }
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+  }
+  .post-body th, .post-body td {
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+  .post-body th {
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-weight: 600;
+  }
+  .post-cta {
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .post-cta h3 { margin-bottom: 0.5rem; }
+  .post-cta p { color: var(--color-text-muted); margin-bottom: 1rem; }
+  .cta-btn {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .cta-btn:hover { background: var(--color-accent-hover); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .post-header h1 { font-size: 1.5rem; }
+  }
+</style>

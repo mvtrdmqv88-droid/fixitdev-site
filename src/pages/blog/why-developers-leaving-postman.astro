@@ -1,0 +1,198 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="Why Developers Are Leaving Postman (And What They're Using Instead)" description="Postman's mandatory login, cloud sync, and growing complexity are pushing developers toward simpler API testing tools. Here's what's happening and what alternatives people are switching to.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time datetime="2026-04-07">April 7, 2026</time>
+        <h1>Why Developers Are Leaving Postman (And What They're Using Instead)</h1>
+        <p class="post-lead">
+          Postman went from a beloved Chrome extension to a billion-dollar platform. Along the way, it lost some of the developers who made it popular in the first place.
+        </p>
+      </header>
+
+      <section class="post-body">
+        <h2>The Turning Points</h2>
+        <p>
+          Postman didn't lose developers overnight. It was a slow drip of changes that each seemed small on their own but added up to a fundamentally different product.
+        </p>
+
+        <h3>Mandatory Account Creation</h3>
+        <p>
+          In September 2023, Postman started requiring users to sign in to use the desktop app. Before that, you could use it offline and anonymously. This was the biggest single trigger for developers looking for alternatives.
+        </p>
+        <p>
+          The backlash was immediate. Reddit threads, Hacker News posts, and GitHub issues filled with developers who felt betrayed. The tool they relied on daily suddenly wanted their email address to function.
+        </p>
+
+        <h3>Cloud Sync by Default</h3>
+        <p>
+          When you sign into Postman, your workspaces sync to their cloud. For many developers, this means API keys, auth tokens, and internal endpoint URLs sitting on a third-party server. Even with encryption, the principle bothers people — especially those working on sensitive or regulated projects.
+        </p>
+        <p>
+          You can use Postman's "Scratch Pad" mode for local-only work, but it's limited and feels like an afterthought.
+        </p>
+
+        <h3>Feature Bloat</h3>
+        <p>
+          Postman now includes API documentation, mock servers, monitoring, flows (a visual API builder), AI-powered test generation, and team collaboration. These are useful features — for API-first companies building entire platforms.
+        </p>
+        <p>
+          But for the developer who just wants to send a POST request and see what comes back? It's a lot of UI to navigate around.
+        </p>
+
+        <h2>What Developers Actually Want</h2>
+        <p>
+          Based on discussions across Reddit, HN, and dev communities, the wish list is pretty consistent:
+        </p>
+        <ul>
+          <li><strong>No mandatory account</strong> — let me use the tool without signing up</li>
+          <li><strong>Local data storage</strong> — my requests and credentials stay on my machine</li>
+          <li><strong>Fast startup</strong> — I want to send a request, not wait for an app to load</li>
+          <li><strong>Clean UI</strong> — show me what I need, hide what I don't</li>
+          <li><strong>Postman import</strong> — I have years of collections, don't make me start over</li>
+        </ul>
+
+        <h2>What People Are Switching To</h2>
+
+        <h3>Browser-Based: SwiftAPI</h3>
+        <p>
+          Full disclosure: I built this one. <a href="/tools/swiftapi">SwiftAPI</a> is a browser-based HTTP client that requires zero login and zero installation. All data stays in your browser's LocalStorage and IndexedDB. It supports all HTTP methods, collections, request history, and Postman collection import.
+        </p>
+        <p>
+          I built it because I got tired of the exact problems described above. I wanted something I could open in a tab, use immediately, and close without worrying about where my data went.
+        </p>
+        <p>
+          The free version includes all core features. <a href="/tools/swiftapi#pricing">Pro</a> ($29 one-time) adds environment variables and collection export/import.
+        </p>
+
+        <h3>Desktop: Bruno</h3>
+        <p>
+          Bruno stores collections as files on your filesystem, making them git-friendly. It's open-source and explicitly offline-first. Good choice for teams who want to version-control their API tests alongside code.
+        </p>
+
+        <h3>Desktop: Insomnia (older versions)</h3>
+        <p>
+          Some developers stick with Insomnia, though Kong (the company behind it) has been adding more cloud features too. The open-source community has forked older versions to maintain the simpler experience.
+        </p>
+
+        <h3>CLI: curl, HTTPie, xh</h3>
+        <p>
+          For developers comfortable in the terminal, these tools never went away. <code>curl</code> is universal, <code>httpie</code> makes the output readable, and <code>xh</code> is a Rust-based alternative that's fast and clean.
+        </p>
+
+        <h2>Is Postman Still Worth Using?</h2>
+        <p>
+          Yes — if you're on a team that needs collaboration features, mock servers, and API documentation in one place. Postman's enterprise features are genuinely useful at scale.
+        </p>
+        <p>
+          But if you're a solo developer, a freelancer, or someone who mostly does quick request/response testing during development, Postman is increasingly more tool than you need. The alternatives have caught up for the common use cases, and several of them respect your privacy better.
+        </p>
+
+        <h2>The Broader Pattern</h2>
+        <p>
+          Postman's trajectory is a common one in dev tools: start simple, get beloved, raise funding, add enterprise features, alienate individual users. It happened with Slack, with Heroku, with GitKraken.
+        </p>
+        <p>
+          The silver lining is that every time a tool gets too complex, it creates space for simpler alternatives. That cycle is healthy for the ecosystem, even if the transition is annoying for individual developers.
+        </p>
+        <p>
+          If you're in that transition right now — looking for something lighter — I'd suggest trying a couple of alternatives and seeing which fits your workflow. You might be surprised how little you actually needed from Postman.
+        </p>
+
+        <div class="post-cta">
+          <p><strong>Looking for a lightweight Postman alternative?</strong> SwiftAPI runs in your browser with zero login. Give it a try.</p>
+          <a href="https://swiftapi.fixitdev.com" class="btn btn-primary">Try SwiftAPI Free</a>
+        </div>
+      </section>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header { margin-bottom: 2.5rem; }
+  .post-header time {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .post-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.3;
+  }
+  .post-lead {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    max-width: 650px;
+  }
+  .post-body {
+    max-width: 700px;
+  }
+  .post-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 2rem 0 0.5rem;
+  }
+  .post-body p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+  .post-body ul {
+    color: var(--color-text-muted);
+    margin: 0.5rem 0 1rem 1.25rem;
+  }
+  .post-body li { margin-bottom: 0.4rem; }
+  .post-body strong { color: var(--color-text); }
+  .post-body a { color: var(--color-accent); }
+  .post-body code {
+    background: var(--color-surface);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+  }
+  .post-body hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 2rem 0;
+  }
+  .post-cta {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .post-cta p {
+    color: var(--color-text) !important;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .btn:hover { text-decoration: none; }
+  .btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--color-accent-hover); }
+
+  @media (max-width: 640px) {
+    .post-header h1 { font-size: 1.5rem; }
+  }
+</style>

@@ -1,0 +1,170 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="The Only 6 SaaS Metrics Indie Founders Actually Need to Track" description="Skip the vanity metrics. Here are the 6 SaaS numbers that actually tell you if your business is healthy — and how to track them without expensive tools.">
+  <article class="blog-post">
+    <div class="container">
+      <header class="post-header">
+        <time datetime="2026-04-07">April 7, 2026</time>
+        <h1>The Only 6 SaaS Metrics Indie Founders Actually Need to Track</h1>
+        <p class="post-lead">
+          You don't need a 50-metric dashboard when you have 30 customers. Here are the six numbers that actually matter at the early stage.
+        </p>
+      </header>
+
+      <div class="post-body">
+        <p>
+          Let me save you some time. I spent weeks reading every "SaaS metrics guide" on the internet, and most of them are written for Series B startups with data teams. If you're an indie founder with a Stripe account and a dream, you need a much shorter list.
+        </p>
+        <p>
+          Here are the six metrics I actually check every week. No fluff, no "north star metric" philosophy essays. Just numbers.
+        </p>
+
+        <h2>1. MRR (Monthly Recurring Revenue)</h2>
+        <p>
+          This is the number. If you track nothing else, track this. MRR tells you how much predictable revenue you're generating each month from subscriptions.
+        </p>
+        <p>
+          The formula is straightforward: add up all your active subscription revenue on a monthly basis. Annual subscriptions get divided by 12. Simple.
+        </p>
+        <p>
+          What trips people up is <strong>changes in MRR</strong>. You want to break it down into: new MRR (new customers), expansion MRR (upgrades), contraction MRR (downgrades), and churned MRR (cancellations). This tells you where your growth is actually coming from.
+        </p>
+
+        <h2>2. ARR (Annual Recurring Revenue)</h2>
+        <p>
+          ARR = MRR x 12. It's that simple. Some founders think ARR is only for companies with annual plans — nope. It's just a way to contextualize your revenue at a yearly scale.
+        </p>
+        <p>
+          I find ARR more useful for goal-setting. "I want to hit $50K ARR" sounds more concrete than "$4,166 MRR." Same number, different psychology.
+        </p>
+
+        <h2>3. Churn Rate</h2>
+        <p>
+          Churn rate = (customers lost during a period / customers at the start of that period) x 100.
+        </p>
+        <p>
+          For indie SaaS, anything under 5% monthly churn is decent. Under 3% is good. Under 1% means you're doing something really right (or you have annual contracts).
+        </p>
+        <p>
+          The thing about churn is that it compounds brutally. At 5% monthly churn, you lose half your customers in about 13 months. At 10%, you lose half in 7 months. These are the kinds of numbers that look fine month-to-month but will quietly kill your business.
+        </p>
+
+        <h2>4. LTV (Lifetime Value)</h2>
+        <p>
+          LTV tells you how much revenue a customer generates before they churn. The simple formula: ARPU / monthly churn rate.
+        </p>
+        <p>
+          Why does this matter? Because it sets the ceiling for your customer acquisition cost (CAC). If your LTV is $200, you shouldn't be spending $250 to acquire a customer. Seems obvious, but you'd be surprised how many founders have no idea what their LTV is.
+        </p>
+
+        <h2>5. ARPU (Average Revenue Per User)</h2>
+        <p>
+          ARPU = MRR / total active customers. This tells you if you have a pricing problem.
+        </p>
+        <p>
+          If your ARPU is $5 and your support costs are $3 per customer, you're in trouble. If your ARPU is $50, you have room to breathe.
+        </p>
+        <p>
+          Watching ARPU over time also tells you if your pricing changes are working. Launched a higher tier? ARPU should go up. If it doesn't, nobody's buying it.
+        </p>
+
+        <h2>6. Revenue Breakdown</h2>
+        <p>
+          This isn't one metric — it's a view. You want to see your revenue broken down by: new, expansion, contraction, and churned. Ideally visualized over time.
+        </p>
+        <p>
+          A revenue breakdown chart is worth more than any single number because it tells you the <em>story</em>. Are you growing because of new customers or because existing customers are upgrading? Are you losing revenue from churn or from downgrades? The answer changes your strategy completely.
+        </p>
+
+        <h2>OK great, but how do I actually track these?</h2>
+        <p>
+          If you're using Stripe (and most indie founders are), you have three options:
+        </p>
+        <ol>
+          <li><strong>Spreadsheets.</strong> Export your Stripe data, write formulas, and update it manually. Works at first. Gets painful fast.</li>
+          <li><strong>Enterprise analytics tools.</strong> Baremetrics, ChartMogul, ProfitWell. Powerful, but expensive. $50-200+/month is steep when you're at $500 MRR.</li>
+          <li><strong>Lightweight tools built for indie scale.</strong> This is why I built <a href="/tools/mrrscope">MRRScope</a> — it connects to Stripe, calculates all six of these metrics automatically, and costs $29 one-time. You can even try it with demo data before connecting anything.</li>
+        </ol>
+
+        <p>
+          Whatever you choose, just start tracking. The founders who know their numbers make better decisions than the ones who don't. It's that simple.
+        </p>
+
+        <div class="post-cta">
+          <h3>Want to see your SaaS metrics right now?</h3>
+          <p><a href="/tools/mrrscope">MRRScope</a> shows you MRR, ARR, Churn, LTV, ARPU and revenue breakdowns — all from your Stripe data. Try the free demo to see it in action.</p>
+          <a href="/tools/mrrscope" class="cta-btn">Try MRRScope Free</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .blog-post { padding: 4rem 0; }
+  .post-header {
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+  }
+  .post-header time {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .post-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.25;
+  }
+  .post-lead {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+  .post-body {
+    max-width: 700px;
+  }
+  .post-body p, .post-body li {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .post-body h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+    color: var(--color-text);
+  }
+  .post-body ol, .post-body ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .post-body a { color: var(--color-accent); }
+  .post-body strong { color: var(--color-text); }
+  .post-body em { font-style: italic; }
+  .post-cta {
+    background: var(--color-surface);
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .post-cta h3 { margin-bottom: 0.5rem; }
+  .post-cta p { color: var(--color-text-muted); margin-bottom: 1rem; }
+  .cta-btn {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .cta-btn:hover { background: var(--color-accent-hover); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .post-header h1 { font-size: 1.5rem; }
+  }
+</style>

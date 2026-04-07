@@ -1,0 +1,492 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="Sandbox CLI" description="Instant ephemeral dev environments via SSH. Run sandbox ssh, get a fresh Ubuntu container, disconnect and it's gone. No cleanup, no clutter.">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-label">Sandbox CLI</p>
+      <h1 class="hero-title">A fresh dev environment.<br />In one command.</h1>
+      <p class="hero-subtitle">
+        Run <code>sandbox ssh</code>, get a fully-loaded Ubuntu container via SSH.<br />
+        When you disconnect, it disappears. No cleanup. No leftover junk.
+      </p>
+      <div class="hero-terminal">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">Terminal</span>
+        </div>
+        <pre class="terminal-body"><span class="prompt">$</span> sandbox ssh
+<span class="output">Creating container... done</span>
+<span class="output">Connecting via SSH...</span>
+<span class="prompt">root@sandbox-7f3a:~#</span> node server.js
+<span class="output">Server running on :3000</span>
+<span class="comment"># disconnect when done — container auto-destroys</span></pre>
+      </div>
+      <div class="hero-actions">
+        <a href="#install" class="btn-primary">Install Now</a>
+        <a href="https://github.com/fixitdev/sandbox-cli" target="_blank" class="btn-secondary">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Points -->
+  <section class="pain-section">
+    <div class="container">
+      <h2 class="section-title">Sound familiar?</h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">&#128169;</div>
+          <h3>"My machine is a mess"</h3>
+          <p>Three versions of Node, two Pythons, a Go that you installed for a tutorial in 2024 and never touched again. Your laptop is a graveyard of dev tools.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">&#128556;</div>
+          <h3>"Works on my machine"</h3>
+          <p>You spent two hours debugging only to realize it was a local config issue. Again. A clean environment would have told you in 5 minutes.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">&#9200;</div>
+          <h3>"Setting up takes forever"</h3>
+          <p>You just want to test one thing. But first: install dependencies, configure env vars, set up the database... By the time you're ready, you've lost momentum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-section">
+    <div class="container">
+      <h2 class="section-title">How it works</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Install</h3>
+          <p>One command. Works on macOS and Linux. Docker is the only dependency.</p>
+          <code class="step-code">brew install fixitdev/tap/sandbox</code>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Connect</h3>
+          <p>Run <code>sandbox ssh</code> and you're inside a fresh Ubuntu container in seconds.</p>
+          <code class="step-code">sandbox ssh</code>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Disconnect</h3>
+          <p>Close the SSH session. The container is destroyed automatically. Zero cleanup.</p>
+          <code class="step-code">exit</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">What you get</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>Instant SSH access</h3>
+          <p>No port-forwarding setup, no Docker exec gymnastics. Just SSH into a real container.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Auto-cleanup</h3>
+          <p>Containers self-destruct on disconnect. Your Docker gets no chance to accumulate junk.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Web Dashboard</h3>
+          <p>See active containers, usage stats, and session history at a glance. Built with Next.js.</p>
+        </div>
+        <div class="feature-item">
+          <h3>SQLite-backed</h3>
+          <p>All session data stored locally in SQLite. No external database. No cloud dependency.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Configurable images</h3>
+          <p>Default Ubuntu, but you can point it at any Docker image you want.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Lightweight daemon</h3>
+          <p>Written in Go. The daemon uses minimal resources and starts instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="section-title">Pricing</h2>
+      <p class="pricing-intro">Start free. Upgrade if you need more.</p>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <ul class="price-features">
+            <li>3 containers per day</li>
+            <li>30-minute session limit</li>
+            <li>Auto-cleanup</li>
+            <li>Web Dashboard</li>
+            <li>Community support</li>
+          </ul>
+          <a href="#install" class="btn-secondary">Get Started</a>
+        </div>
+        <div class="price-card featured">
+          <h3>Pro</h3>
+          <p class="price">$4.99<span class="price-period">/month</span></p>
+          <ul class="price-features">
+            <li>Unlimited containers</li>
+            <li>No time limit</li>
+            <li>Auto-cleanup</li>
+            <li>Web Dashboard</li>
+            <li>Priority support</li>
+            <li>Custom base images</li>
+          </ul>
+          <a href="#install" class="btn-primary">Start Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Install -->
+  <section id="install" class="install-section">
+    <div class="container">
+      <h2 class="section-title">Install</h2>
+      <div class="install-options">
+        <div class="install-option">
+          <h3>Homebrew (macOS / Linux)</h3>
+          <pre class="install-code">brew install fixitdev/tap/sandbox</pre>
+        </div>
+        <div class="install-option">
+          <h3>Go install</h3>
+          <pre class="install-code">go install github.com/fixitdev/sandbox-cli@latest</pre>
+        </div>
+        <div class="install-option">
+          <h3>From source</h3>
+          <pre class="install-code">git clone https://github.com/fixitdev/sandbox-cli.git
+cd sandbox-cli && make install</pre>
+        </div>
+      </div>
+      <p class="install-note">Requires Docker to be installed and running.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Do I need Docker installed?</summary>
+          <p>Yes. Sandbox CLI uses the Docker SDK under the hood to create and manage containers. If you have Docker Desktop or Docker Engine running, you're good to go.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens to my files when I disconnect?</summary>
+          <p>They're gone. That's the whole point. If you need to persist files, mount a volume with <code>sandbox ssh --volume ./myproject:/workspace</code>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I use a custom Docker image?</summary>
+          <p>Absolutely. Pass <code>--image your-image:tag</code> to use any image you want. The default is Ubuntu with common dev tools pre-installed.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is this a hosted service?</summary>
+          <p>Nope. Everything runs locally on your machine. Your data never leaves your laptop. The Pro license just unlocks usage limits in the CLI.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How is this different from VS Code Dev Containers?</summary>
+          <p>Dev Containers are great for long-running project environments. Sandbox CLI is for quick, throwaway sessions. Need to test something? <code>sandbox ssh</code>. Done? Close the terminal. No config files, no project setup.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* Hero */
+  .hero {
+    padding: 5rem 0 3rem;
+    text-align: center;
+  }
+  .hero-label {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  .hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+  }
+  .hero-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+  }
+  .hero-subtitle code {
+    background: var(--color-surface);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--color-accent);
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  /* Terminal */
+  .hero-terminal {
+    max-width: 560px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+  .terminal-bar {
+    background: #1e1e1e;
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .dot.red { background: #ff5f57; }
+  .dot.yellow { background: #febc2e; }
+  .dot.green { background: #28c840; }
+  .terminal-title {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+  }
+  .terminal-body {
+    background: #0d0d0d;
+    padding: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    overflow-x: auto;
+  }
+  .prompt { color: var(--color-success); }
+  .output { color: var(--color-text-muted); }
+  .comment { color: #555; }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--color-accent-hover); text-decoration: none; }
+  .btn-secondary {
+    display: inline-block;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: border-color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--color-text-muted); text-decoration: none; }
+
+  /* Section basics */
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  /* Pain Points */
+  .pain-section { padding: 4rem 0; }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .pain-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .pain-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  .pain-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .pain-card p { color: var(--color-text-muted); font-size: 0.9rem; }
+
+  /* How It Works */
+  .how-section { padding: 4rem 0; }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .step-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .step-number {
+    width: 32px;
+    height: 32px;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  .step-card h3 { margin-bottom: 0.5rem; }
+  .step-card p { color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 0.75rem; }
+  .step-card code { color: var(--color-text-muted); font-size: 0.85rem; }
+  .step-code {
+    display: block;
+    background: #0d0d0d;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-success);
+  }
+
+  /* Features */
+  .features-section { padding: 4rem 0; }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+  .feature-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .feature-item h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+  .feature-item p { color: var(--color-text-muted); font-size: 0.9rem; }
+
+  /* Pricing */
+  .pricing-section { padding: 4rem 0; }
+  .pricing-intro { color: var(--color-text-muted); margin-top: -1.5rem; margin-bottom: 2rem; }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    max-width: 650px;
+  }
+  .price-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  .price-card.featured { border-color: var(--color-accent); }
+  .price-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .price {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+  .price-period { font-size: 0.9rem; font-weight: 400; color: var(--color-text-muted); }
+  .price-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+  .price-features li {
+    padding: 0.35rem 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+  .price-features li::before {
+    content: "- ";
+    color: var(--color-success);
+    margin-right: 0.25rem;
+  }
+
+  /* Install */
+  .install-section { padding: 4rem 0; }
+  .install-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .install-option {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .install-option h3 { font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .install-code {
+    background: #0d0d0d;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-success);
+    overflow-x: auto;
+  }
+  .install-note {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+  }
+
+  /* FAQ */
+  .faq-section { padding: 4rem 0; }
+  .faq-list { max-width: 700px; }
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: 1rem 0;
+  }
+  .faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 1rem;
+  }
+  .faq-item summary:hover { color: var(--color-accent); }
+  .faq-item p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    padding-left: 0.25rem;
+  }
+  .faq-item code {
+    background: var(--color-surface);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 640px) {
+    .hero-title { font-size: 1.75rem; }
+    .hero-subtitle { font-size: 0.95rem; }
+    .hero-actions { flex-direction: column; align-items: center; }
+  }
+</style>

@@ -1,0 +1,467 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="ContractScan" description="AI-powered contract review for freelancers. Upload a PDF, get instant risk analysis, red flags, and suggested edits. No lawyer needed.">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-badge">Built for freelancers</span>
+      <h1 class="hero-title">Stop signing contracts you don't fully understand.</h1>
+      <p class="hero-subtitle">
+        Upload your contract PDF. Get an instant AI-powered review with risk scores,
+        red flag alerts, and plain-English explanations of every clause that matters.
+      </p>
+      <div class="hero-actions">
+        <a href="https://app.fixitdev.com/contractscan" class="btn btn-primary">Scan a Contract Free</a>
+        <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+      </div>
+      <p class="hero-note">3 free scans per day. No sign-up required.</p>
+    </div>
+  </section>
+
+  <!-- Pain Point -->
+  <section class="pain-section">
+    <div class="container">
+      <h2 class="section-title">Sound familiar?</h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="pain-icon">&#x1F4C4;</span>
+          <p>"I got a 12-page contract from a client. I read it three times and still wasn't sure what I was agreeing to."</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">&#x1F4B8;</span>
+          <p>"Turns out there was an unlimited liability clause buried on page 7. Found out the hard way."</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">&#x23F3;</span>
+          <p>"I can't afford a $300/hour lawyer to review every contract before I sign."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="steps-section">
+    <div class="container">
+      <h2 class="section-title">How it works</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <h3>Upload your contract</h3>
+          <p>Drag and drop any contract PDF. We support NDA, MSA, SOW, freelance agreements, and more.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <h3>AI analyzes every clause</h3>
+          <p>ContractScan reads the full document, identifies key terms, and flags anything that could hurt you.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <h3>Get your report</h3>
+          <p>See a risk score, highlighted red flags, plain-English explanations, and suggested edits you can copy-paste.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">What ContractScan catches</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Unreasonable Liability</h3>
+          <p>Spots clauses where you'd be on the hook for damages way beyond the contract value.</p>
+        </div>
+        <div class="feature-card">
+          <h3>IP Assignment Traps</h3>
+          <p>Flags when a client is claiming ownership of your pre-existing work or tools.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Non-Compete Clauses</h3>
+          <p>Alerts you to restrictions that could prevent you from working with other clients.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Payment Terms</h3>
+          <p>Highlights vague payment schedules, net-90 traps, and "pay when we feel like it" language.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Termination Gotchas</h3>
+          <p>Finds one-sided termination rights and missing kill fee provisions.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Risk Score</h3>
+          <p>An overall 1-100 score so you can instantly see if a contract is safe, sketchy, or run-away-now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <h2 class="section-title">Pricing</h2>
+      <p class="pricing-subtitle">Start free. Upgrade when you need more.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <ul class="pricing-features">
+            <li>3 contract scans per day</li>
+            <li>Full clause analysis</li>
+            <li>Risk score + red flags</li>
+            <li>Suggested edits</li>
+          </ul>
+          <a href="https://app.fixitdev.com/contractscan" class="btn btn-ghost">Start Free</a>
+        </div>
+        <div class="pricing-card pricing-card-pro">
+          <span class="pro-badge">Popular</span>
+          <h3>Pro</h3>
+          <p class="price">$9.99<span class="price-period">/month</span></p>
+          <p class="price-alt">or $29 one-time lifetime access</p>
+          <ul class="pricing-features">
+            <li>Unlimited scans</li>
+            <li>Priority processing</li>
+            <li>Downloadable PDF reports</li>
+            <li>Everything in Free</li>
+          </ul>
+          <a href="https://app.fixitdev.com/contractscan/pro" class="btn btn-primary">Go Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is this a replacement for a lawyer?</summary>
+          <p>No. ContractScan is a review assistant that helps you understand contracts faster and spot potential issues. For high-stakes deals, you should still consult a real attorney. Think of it as your first pass before deciding if you need professional legal help.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my contract data kept private?</summary>
+          <p>Your documents are processed in real-time and are not stored after analysis. We don't use your contracts to train any AI models. Your business is your business.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What types of contracts does it support?</summary>
+          <p>Any PDF contract in English: freelance agreements, NDAs, MSAs, SOWs, consulting contracts, service agreements, and more. If it's a contract, ContractScan can read it.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How accurate is the analysis?</summary>
+          <p>ContractScan is powered by Claude, one of the most capable AI models available. It catches the same issues a human reviewer would flag. That said, no tool is 100% perfect -- always apply your own judgment too.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Why the $29 lifetime option?</summary>
+          <p>Because I'm a freelancer too, and I know subscriptions add up. If you review contracts regularly, the one-time payment is a better deal. No tricks, no expiration.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <div class="container">
+      <h2>Don't sign another contract blind.</h2>
+      <p>Your next contract review takes 30 seconds. Try it free.</p>
+      <a href="https://app.fixitdev.com/contractscan" class="btn btn-primary btn-lg">Scan a Contract Now</a>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  /* Hero */
+  .hero {
+    padding: 5rem 0 4rem;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    max-width: 700px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.15;
+  }
+  .hero-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.15rem;
+    max-width: 560px;
+    margin: 0 auto 2rem;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero-note {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn:hover { text-decoration: none; }
+  .btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--color-accent-hover); }
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+  }
+  .btn-ghost:hover { border-color: var(--color-text-muted); }
+  .btn-lg { padding: 1rem 2rem; font-size: 1.05rem; }
+
+  /* Section titles */
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* Pain */
+  .pain-section {
+    padding: 4rem 0;
+    background: var(--color-surface);
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .pain-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .pain-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .pain-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+
+  /* Steps */
+  .steps-section { padding: 4rem 0; }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .step-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  .step-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+  .step-card p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* Features */
+  .features-section {
+    padding: 4rem 0;
+    background: var(--color-surface);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+  .feature-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .feature-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent);
+  }
+  .feature-card p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* Pricing */
+  .pricing-section { padding: 4rem 0; }
+  .pricing-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-top: -1rem;
+    margin-bottom: 2.5rem;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .pricing-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  .pricing-card-pro {
+    border-color: var(--color-accent);
+  }
+  .pro-badge {
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+  }
+  .pricing-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+  .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+  }
+  .price-period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+  }
+  .price-alt {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+  .pricing-features {
+    list-style: none;
+    text-align: left;
+    margin: 1.5rem 0;
+  }
+  .pricing-features li {
+    padding: 0.4rem 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+  .pricing-features li::before {
+    content: "--- ";
+    color: var(--color-success);
+    margin-right: 0.25rem;
+  }
+
+  /* FAQ */
+  .faq-section { padding: 4rem 0; }
+  .faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    background: var(--color-surface);
+  }
+  .faq-item summary {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    list-style: none;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before {
+    content: "+ ";
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  .faq-item[open] summary::before { content: "- "; }
+  .faq-item p {
+    padding: 0 1.25rem 1rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* Bottom CTA */
+  .bottom-cta {
+    padding: 5rem 0;
+    text-align: center;
+    background: var(--color-surface);
+  }
+  .bottom-cta h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+  .bottom-cta p {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 640px) {
+    .hero-title { font-size: 1.75rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .section-title { font-size: 1.35rem; }
+    .bottom-cta h2 { font-size: 1.5rem; }
+  }
+</style>

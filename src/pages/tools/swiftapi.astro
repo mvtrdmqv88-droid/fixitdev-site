@@ -1,0 +1,392 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base title="SwiftAPI — Zero-Login API Testing" description="Test APIs directly in your browser. No login, no install, no cloud sync. SwiftAPI is a lightweight HTTP client that respects your privacy and your time.">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-badge">Free &amp; Open</span>
+      <h1 class="hero-title">API Testing Without the <span class="accent">Baggage</span></h1>
+      <p class="hero-subtitle">
+        Zero login. Zero install. Just open your browser and start testing.
+        SwiftAPI is a lightweight HTTP client that keeps your data where it belongs — on your machine.
+      </p>
+      <div class="hero-actions">
+        <a href="https://swiftapi.fixitdev.com" class="btn btn-primary">Start Testing Now</a>
+        <a href="https://github.com/fixitdev/swiftapi" class="btn btn-secondary">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Points -->
+  <section class="pain-section">
+    <div class="container">
+      <h2 class="section-title">Sound Familiar?</h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="pain-icon">&#128544;</span>
+          <h3>Forced to create an account just to send a GET request</h3>
+          <p>You just want to test an endpoint. Not start a relationship with a SaaS company.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">&#128451;</span>
+          <h3>Your API keys are synced to someone else's cloud</h3>
+          <p>Your requests, headers, tokens — all uploaded to servers you don't control. Cool, cool.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">&#128556;</span>
+          <h3>500MB desktop app for something that should be a tab</h3>
+          <p>Electron apps eating your RAM so you can do something a browser can handle natively.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-section">
+    <div class="container">
+      <h2 class="section-title">Three Steps. That's It.</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Open SwiftAPI</h3>
+          <p>No download, no sign-up. Just go to the URL and you're in.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Build Your Request</h3>
+          <p>Pick a method, enter the URL, add headers and body. Send.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Inspect the Response</h3>
+          <p>See status, headers, body, and timing. Save to a collection if you want.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">What You Get</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <h3>All HTTP Methods</h3>
+          <p>GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS — the full set.</p>
+        </div>
+        <div class="feature">
+          <h3>Response Viewer</h3>
+          <p>Syntax-highlighted JSON/XML, raw text, headers tab, and response timing.</p>
+        </div>
+        <div class="feature">
+          <h3>Collections</h3>
+          <p>Organize requests into collections. Save, rename, reorder. All stored locally.</p>
+        </div>
+        <div class="feature">
+          <h3>Postman Import</h3>
+          <p>Already have Postman collections? Import them directly. No lock-in.</p>
+        </div>
+        <div class="feature">
+          <h3>Request History</h3>
+          <p>Every request you send is logged locally. Re-run anything with one click.</p>
+        </div>
+        <div class="feature">
+          <h3>100% Local Storage</h3>
+          <p>LocalStorage + IndexedDB. Nothing leaves your browser. Ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Pricing</h2>
+      <p class="pricing-desc">The core tool is fully free. Pro adds power-user features if you need them.</p>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <p class="price-note">forever</p>
+          <ul>
+            <li>All HTTP methods</li>
+            <li>Response viewer with syntax highlighting</li>
+            <li>Collections &amp; request history</li>
+            <li>Postman import</li>
+            <li>100% local storage</li>
+          </ul>
+          <a href="https://swiftapi.fixitdev.com" class="btn btn-primary">Start Free</a>
+        </div>
+        <div class="price-card price-card-pro">
+          <h3>Pro</h3>
+          <p class="price">$29</p>
+          <p class="price-note">one-time, or $9.99/mo</p>
+          <ul>
+            <li>Everything in Free</li>
+            <li>Environment variables</li>
+            <li>Collection export / import (JSON)</li>
+            <li>Priority feature requests</li>
+          </ul>
+          <a href="https://swiftapi.fixitdev.com/pro" class="btn btn-primary">Get Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is my data really stored locally?</summary>
+          <p>Yes. SwiftAPI uses LocalStorage and IndexedDB — both are browser-native storage that never leave your device. There's no backend, no account system, no telemetry. Open DevTools and see for yourself.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I import my Postman collections?</summary>
+          <p>Yep. Export your Postman collection as JSON (v2.1 format), then import it into SwiftAPI. Your requests, headers, and body data will come through. Environment variables require Pro.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if I clear my browser data?</summary>
+          <p>Your saved requests and collections live in browser storage. If you clear it, they're gone. Pro users can export/import collections as a backup. I'd recommend exporting regularly if your collections are important to you.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does it handle CORS issues?</summary>
+          <p>SwiftAPI runs in the browser, so it's subject to CORS just like any other web app. For APIs that don't send CORS headers, you'd need a proxy or browser extension — same as with any browser-based tool. I'm exploring a local proxy helper for a future release.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Why not just use curl?</summary>
+          <p>You absolutely can. But if you want a visual interface, saved collections, response formatting, and you don't want to remember the flags for setting headers — SwiftAPI is curl with a UI and a memory.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <div class="container">
+      <h2>Ready to ditch the bloat?</h2>
+      <p>Open SwiftAPI in your browser and send your first request in under 10 seconds.</p>
+      <a href="https://swiftapi.fixitdev.com" class="btn btn-primary btn-lg">Try SwiftAPI Free</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* Hero */
+  .hero {
+    padding: 5rem 0 4rem;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .accent { color: var(--color-accent); }
+  .hero-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.15rem;
+    max-width: 580px;
+    margin: 0 auto 2rem;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  .btn:hover { text-decoration: none; }
+  .btn-primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--color-accent-hover); }
+  .btn-secondary {
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+  }
+  .btn-secondary:hover { border-color: var(--color-text-muted); }
+  .btn-lg { padding: 1rem 2rem; font-size: 1.05rem; }
+
+  /* Sections */
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Pain Points */
+  .pain-section { padding: 4rem 0; }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .pain-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .pain-icon { font-size: 1.5rem; display: block; margin-bottom: 0.75rem; }
+  .pain-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .pain-card p { color: var(--color-text-muted); font-size: 0.9rem; }
+
+  /* How It Works */
+  .how-section { padding: 4rem 0; }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+  .step {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .step h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+  .step p { color: var(--color-text-muted); font-size: 0.9rem; }
+
+  /* Features */
+  .features-section { padding: 4rem 0; }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .feature {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .feature h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .feature p { color: var(--color-text-muted); font-size: 0.9rem; }
+
+  /* Pricing */
+  .pricing-section { padding: 4rem 0; }
+  .pricing-desc {
+    color: var(--color-text-muted);
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 700px;
+  }
+  .price-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  .price-card-pro { border-color: var(--color-accent); }
+  .price-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .price { font-size: 2rem; font-weight: 800; margin-bottom: 0.25rem; }
+  .price-note { color: var(--color-text-muted); font-size: 0.85rem; margin-bottom: 1.25rem; }
+  .price-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+  .price-card li {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    padding: 0.35rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+  .price-card li::before {
+    content: "\2713";
+    color: var(--color-success);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  /* FAQ */
+  .faq-section { padding: 4rem 0; }
+  .faq-list { max-width: 700px; }
+  .faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+  .faq-item summary {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: var(--color-surface);
+  }
+  .faq-item summary:hover { color: var(--color-accent); }
+  .faq-item p {
+    padding: 0 1.25rem 1rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* Bottom CTA */
+  .bottom-cta {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .bottom-cta h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+  .bottom-cta p { color: var(--color-text-muted); margin-bottom: 1.5rem; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .hero-title { font-size: 1.75rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .pricing-grid { grid-template-columns: 1fr; }
+  }
+</style>
