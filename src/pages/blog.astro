@@ -1,0 +1,53 @@
+---
+import Base from "../layouts/Base.astro";
+
+// Blog posts will be added here by 黑嘴 as tools are completed
+const posts: { title: string; date: string; href: string; excerpt: string }[] = [
+  // Example:
+  // { title: "How to Review Contracts Faster with AI", date: "2026-04-07", href: "/blog/ai-contract-review", excerpt: "..." },
+];
+---
+
+<Base title="Blog" description="FixItDev Blog — Tutorials, comparisons, and tips from an indie developer.">
+  <section class="blog-section">
+    <div class="container">
+      <h1 class="page-title">Blog</h1>
+      <p class="page-desc">Tutorials, comparisons, and the occasional rant about tools that don't work.</p>
+
+      {posts.length === 0 ? (
+        <p class="empty-state">First posts coming soon.</p>
+      ) : (
+        <div class="posts-list">
+          {posts.map((post) => (
+            <a href={post.href} class="post-card">
+              <time class="post-date">{post.date}</time>
+              <h2 class="post-title">{post.title}</h2>
+              <p class="post-excerpt">{post.excerpt}</p>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .blog-section { padding: 4rem 0; }
+  .page-title { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .page-desc { color: var(--color-text-muted); margin-bottom: 3rem; }
+  .posts-list { display: flex; flex-direction: column; gap: 1rem; }
+  .post-card {
+    display: block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+    text-decoration: none;
+  }
+  .post-card:hover { border-color: var(--color-accent); text-decoration: none; }
+  .post-date { color: var(--color-text-muted); font-size: 0.8rem; }
+  .post-title { color: var(--color-text); font-size: 1.15rem; margin: 0.25rem 0 0.5rem; }
+  .post-excerpt { color: var(--color-text-muted); font-size: 0.9rem; }
+  .empty-state { color: var(--color-text-muted); font-style: italic; }
+</style>
